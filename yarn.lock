@@ -139,6 +139,14 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
+"@astrojs/node@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@astrojs/node/-/node-2.0.1.tgz#fc078a9a53ffda3ea951c22a24882acc142ab3bf"
+  integrity sha512-OJD4edLr7l10TjJ8bsx9VCCMkvFPFSYyLCI0HpD651iJZZWSn1zlp5ik0J5kArWgwFDEdSxtL7Dt8kM3/naN6A==
+  dependencies:
+    "@astrojs/webapi" "^1.1.0"
+    send "^0.18.0"
+
 "@astrojs/prism@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-1.0.1.tgz#a7a778f9e3814885f587d8074a15452947ab4252"
@@ -1694,6 +1702,15 @@
     chalk "4.1.0"
     confusing-browser-globals "^1.0.9"
     semver "7.3.4"
+
+"@nrwl/express@^15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@nrwl/express/-/express-15.0.1.tgz#0acc0c61dded36a84f8d7ef0477ecaf677a88c97"
+  integrity sha512-GFPTA17QHIxG3h7+o9i/VXb86Qy6oFbfbagJsqW8miEDImhdwbTz1y5NlJyHhOJ2+Y7ZHfNqkWR+q3O0xHGN0g==
+  dependencies:
+    "@nrwl/devkit" "15.0.1"
+    "@nrwl/node" "15.0.1"
+    "@nrwl/workspace" "15.0.1"
 
 "@nrwl/jest@14.8.6":
   version "14.8.6"
@@ -9335,7 +9352,7 @@ semver@^6.0.0, semver@^6.1.1, semver@^6.1.2, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-send@0.18.0:
+send@0.18.0, send@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/send/-/send-0.18.0.tgz#670167cc654b05f5aa4a767f9113bb371bc706be"
   integrity sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==
