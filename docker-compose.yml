@@ -1,0 +1,26 @@
+version: '3.2'
+
+services:
+  database:
+    image: mongo:latest
+    volumes:
+      - database:/data/db
+      - ./config/mongod.conf:/etc/mongo/mongod.conf
+    ports:
+      - "27017:27017"
+    networks:
+      - tsunami
+
+  rabbitmq:
+    image: rabbitmq:alpine
+    ports:
+      - 5672:5672
+      - 8080:8080
+    networks:
+      - tsunami
+
+networks:
+  tsunami:
+
+volumes:
+  database:

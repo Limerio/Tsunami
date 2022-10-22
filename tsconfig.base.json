@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tsunami-clone/types": ["libs/types/src/index.ts"],
+      "@api/*": ["apps/api/src/common/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
