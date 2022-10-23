@@ -1,7 +1,14 @@
 import { ModelDefinition } from '@nestjs/mongoose'
+import { Schema } from 'mongoose'
 
 export const User: ModelDefinition = {
   name: 'user',
   collection: 'users',
-  schema: {},
+  schema: new Schema(
+    {
+      username: { type: String, required: true, unique: true },
+      password: { type: String, required: true, unique: true },
+    },
+    { timestamps: true }
+  ),
 }

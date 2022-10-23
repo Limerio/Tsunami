@@ -1,12 +1,27 @@
-import { Injectable } from '@nestjs/common'
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
+import { Inject, Injectable } from '@nestjs/common'
 
-import type { TUser } from '@tsunami-clone/types'
+import { IUsersService, TUserWithoutPassword } from '@api/modules/users'
+import { Services } from '@api/utils/constants'
 
 import { IAuthService } from '../interfaces'
 
 @Injectable()
 export class AuthService implements IAuthService {
-  validateUser(username: string, password: string): Promise<TUser> {
-    throw new Error('Method not implemented.')
+  constructor(
+    @Inject(Services.Users) private readonly usersService: IUsersService
+  ) {}
+
+  async validateUser(
+    username: string,
+    password: string
+  ): Promise<TUserWithoutPassword | null> {
+    const user = await this.usersService.findOne(username)
+    if (user && this.usersService.comparePassword(password, user.password)) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { password, ...result } = user.toJSON()
+      return result
+    }
+    return null
   }
 }

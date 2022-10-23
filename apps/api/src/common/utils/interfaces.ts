@@ -1,4 +1,1 @@
-import { ConfigService } from '@nestjs/config'
-
-type EnvKeys = 'PORT' | 'DATABASE_URL'
-export type ConfigServiceWithKeys = ConfigService<Record<EnvKeys, unknown>>
+export type EnvKeys = 'PORT' | 'DATABASE_URL' | 'BCRYPT_SALT'
