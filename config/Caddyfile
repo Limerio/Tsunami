@@ -1,9 +1,9 @@
 api.tsunami.localhost {
   encode zstd gzip
-  reverse_proxy localhost:4001
+  reverse_proxy api:4001
 }
 
 tsunami.localhost {
   encode zstd gzip
-  reverse_proxy localhost:4000
+  reverse_proxy web:4000
 }

@@ -48,6 +48,7 @@
     },
     "@nrwl/next": {
       "application": {
+        "style": "styled-components",
         "linter": "eslint"
       }
     }

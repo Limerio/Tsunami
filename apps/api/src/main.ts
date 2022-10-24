@@ -1,5 +1,5 @@
-import { NestFactory } from '@nestjs/core'
 import { Logger, ValidationPipe } from '@nestjs/common'
+import { NestFactory } from '@nestjs/core'
 import * as compression from 'compression'
 import * as session from 'express-session'
 import * as passport from 'passport'
@@ -12,9 +12,6 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe())
   app.use(compression())
-  app.enableCors({
-    credentials: true,
-  })
   app.use(
     session({
       secret: process.env.SESSION_SECRET,

@@ -21,7 +21,6 @@ services:
 
   caddy:
     image: caddy
-    container_name: server
     ports:
       - 80:80
       - 443:443
@@ -29,10 +28,12 @@ services:
     volumes:
       - /site:/srv
       - caddy_data:/data
-      - ./config/caddy:/config
+      - ./config/caddy:/config/caddy
+      - ./config/Caddyfile:/etc/caddy/Caddyfile
 
 networks:
   tsunami:
 
 volumes:
   database:
+  caddy_data:
