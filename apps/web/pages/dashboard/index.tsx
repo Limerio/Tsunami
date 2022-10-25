@@ -1,13 +1,12 @@
-import { checkAuth } from '@web/hooks'
-import { InferGetServerSidePropsType } from 'next'
+import { useAuth } from '@web/hooks'
+import { DashboardLayout } from '@web/layouts'
 
-export async function getServerSideProps() {
-  const data = await checkAuth()
-  return data
-}
+export default function Dashboard() {
+  const { user } = useAuth()
 
-export default function Dashboard({
-  user,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return <>{user.username}</>
+  return (
+    <DashboardLayout title="Home">
+      <h1>{user?.username}</h1>
+    </DashboardLayout>
+  )
 }

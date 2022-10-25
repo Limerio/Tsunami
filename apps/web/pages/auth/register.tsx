@@ -1,14 +1,13 @@
-import { Button, TextInput } from '@mantine/core'
+import { Button, PasswordInput, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import { Form, TitleForm } from '@web/utils/styles'
+import type { TAuthRegisterData } from '@web/utils/types'
 import { AuthService } from '@web/services'
+import Link from 'next/link'
 
 export default function Register() {
-  const router = useRouter()
-  const form = useForm({
+  const form = useForm<TAuthRegisterData>({
     initialValues: {
       user: {
         username: '',
@@ -20,7 +19,8 @@ export default function Register() {
       user: {
         username: (value: string) =>
           value.length < 2 ? 'Username must have at least 2 letters' : null,
-        confirmPassword: (value: string, values: typeof this.values) =>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        confirmPassword: (value: string, values: any) =>
           value !== values.user.password ? 'Passwords did not match' : null,
       },
     },
@@ -29,7 +29,7 @@ export default function Register() {
   const handleSubmit = async (values: typeof form.values) => {
     const { status } = await AuthService.registerAccount(values)
     if (status === 200) {
-      router.push('/auth/login')
+      window.location.href = '/auth/login'
     }
   }
 
@@ -41,17 +41,15 @@ export default function Register() {
         placeholder="Username"
         {...form.getInputProps('user.username')}
       />
-      <TextInput
+      <PasswordInput
         label="Password"
         placeholder="Password"
-        type="password"
         mt="md"
         {...form.getInputProps('user.password')}
       />
-      <TextInput
+      <PasswordInput
         label="Confirm Password"
         placeholder="Confirm Password"
-        type="password"
         mt="md"
         {...form.getInputProps('user.confirmPassword')}
       />

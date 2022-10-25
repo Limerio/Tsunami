@@ -1,1 +1,1 @@
-export * from './checkAuth'
+export * from './useAuth'

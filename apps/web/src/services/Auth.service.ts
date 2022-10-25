@@ -1,25 +1,27 @@
-import type { TAuthData } from '@web/utils/types'
-import fetch from 'node-fetch'
+import { withCredentials } from '@tsunami-clone/constants'
+import type { TUser } from '@tsunami-clone/types'
+import { api } from '@web/utils/api'
+import type { TAuthLoginData } from '@web/utils/types'
+import type { AxiosResponse } from 'axios'
 
 export class AuthService {
-  static async registerAccount(values: TAuthData) {
-    const res = await fetch('http://localhost:4200/auth/register', {
-      method: 'POST',
-      body: JSON.stringify(values.user),
-    })
-    return { data: await res.json(), status: res.status }
+  static async registerAccount(
+    values: TAuthLoginData
+  ): Promise<AxiosResponse<TUser>> {
+    return await api.post('/auth/register', values.user, withCredentials)
   }
 
-  static async loginAccount(values: TAuthData) {
-    const res = await fetch('http://localhost:4200/auth/login', {
-      method: 'POST',
-      body: JSON.stringify(values.user),
-    })
-    return { data: await res.json(), status: res.status }
+  static async loginAccount(
+    values: TAuthLoginData
+  ): Promise<AxiosResponse<TUser>> {
+    return await api.post('/auth/login', values.user, withCredentials)
   }
 
-  static async user() {
-    const res = await fetch('http://localhost:4200/auth/user')
-    return { data: await res.json(), status: res.status }
+  static async userAccount(): Promise<AxiosResponse<TUser>> {
+    return await api.get('/auth/user', withCredentials)
+  }
+
+  static async logoutAccount(): Promise<AxiosResponse> {
+    return await api.delete('/auth/logout', withCredentials)
   }
 }

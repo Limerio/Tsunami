@@ -1,4 +1,5 @@
 export type TUser = {
   username: string
-  password: string
+  updateAt: Date
+  createdAt: Date
 }

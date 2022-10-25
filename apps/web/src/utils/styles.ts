@@ -12,3 +12,7 @@ export const Form = styled.form`
 export const TitleForm = styled.h1`
   text-align: center;
 `
+
+export const SidebarMain = styled.main`
+  display: flex;
+`

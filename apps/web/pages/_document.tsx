@@ -1,17 +1,21 @@
-import { createStylesServer, ServerStyles } from '@mantine/next'
-import { ServerStyleSheet } from 'styled-components'
+/* eslint-disable react/display-name */
 import Document, {
-  DocumentContext,
-  Head,
   Html,
+  Head,
   Main,
   NextScript,
+  DocumentContext,
+  DocumentInitialProps,
 } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
+import { ServerStyles, createStylesServer } from '@mantine/next'
 
 const stylesServer = createStylesServer()
 
-export default class _Document extends Document {
-  static getInitialProps = async (ctx: DocumentContext) => {
+export default class CustomDocument extends Document {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const originalRenderPage = ctx.renderPage
 
     const sheet = new ServerStyleSheet()
@@ -28,7 +32,7 @@ export default class _Document extends Document {
     return {
       ...initialProps,
       styles: [
-        ...styles,
+        styles,
         <ServerStyles
           html={initialProps.html}
           server={stylesServer}

@@ -8,13 +8,8 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "apps/web-e2e/cypress.config.ts",
-        "devServerTarget": "web:serve:development",
+        "devServerTarget": "web:dev",
         "testingType": "e2e"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "web:serve:production"
-        }
       }
     },
     "lint": {

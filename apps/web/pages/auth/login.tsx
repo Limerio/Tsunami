@@ -1,17 +1,15 @@
 import { Form, TitleForm } from '@web/utils/styles'
-import { TextInput, Button } from '@mantine/core'
+import { TextInput, Button, PasswordInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { AuthService } from '@web/services'
+import Link from 'next/link'
 
 export default function Login() {
-  const router = useRouter()
   const form = useForm({
     initialValues: {
       user: {
-        username: '',
-        password: '',
+        username: 'Test',
+        password: 'password',
       },
     },
 
@@ -26,7 +24,7 @@ export default function Login() {
   const handleSubmit = async (values: typeof form.values) => {
     const { status } = await AuthService.loginAccount(values)
     if (status === 200) {
-      router.push('/dashboard')
+      window.location.href = '/dashboard'
     }
   }
 
@@ -38,10 +36,9 @@ export default function Login() {
         placeholder="Username"
         {...form.getInputProps('user.username')}
       />
-      <TextInput
+      <PasswordInput
         label="Password"
         placeholder="Password"
-        type="password"
         mt="md"
         {...form.getInputProps('user.password')}
       />
