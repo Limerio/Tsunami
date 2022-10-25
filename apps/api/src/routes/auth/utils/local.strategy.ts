@@ -4,7 +4,7 @@ import { PassportStrategy } from '@nestjs/passport'
 import { Injectable, UnauthorizedException, Inject } from '@nestjs/common'
 import { AuthService } from '../services'
 import { Services } from '@api/utils/constants'
-import { TUserWithoutPassword } from '@api/modules/users'
+import { TUser } from '@tsunami-clone/types'
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {
@@ -14,14 +14,10 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     super()
   }
 
-  async validate(
-    username: string,
-    password: string
-  ): Promise<TUserWithoutPassword> {
+  async validate(username: string, password: string): Promise<TUser> {
     const user = await this.authService.validateUser(username, password)
-    if (!user) {
-      throw new UnauthorizedException()
-    }
+    if (!user) throw new UnauthorizedException()
+
     return user
   }
 }

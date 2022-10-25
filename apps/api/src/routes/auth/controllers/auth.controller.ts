@@ -14,11 +14,10 @@ import {
   UseInterceptors,
   SerializeOptions,
 } from '@nestjs/common'
-import { instanceToPlain } from 'class-transformer'
 
+import type { IUsersService, TUserWithPassword } from '@api/modules/users'
 import { AuthGuard, LocalAuthGuard } from '../guards'
 import { AuthenticatedRequest } from '../interfaces'
-import { IUsersService } from '@api/modules/users'
 import { Services } from '@api/utils/constants'
 import { UserEntity } from '../entities'
 import { CreateUserDto } from '../dtos'
@@ -37,8 +36,8 @@ export class AuthController {
 
   @UseGuards(AuthGuard)
   @Get('user')
-  getUser(@User() user: UserEntity): UserEntity {
-    return user
+  async getUser(@User() user: TUserWithPassword): Promise<UserEntity> {
+    return new UserEntity(user)
   }
 
   @UseGuards(LocalAuthGuard)
@@ -59,7 +58,9 @@ export class AuthController {
     @Res() res: Response
   ): void {
     req.logout(err => {
-      return err ? res.send(400) : res.send(200)
+      return err
+        ? res.sendStatus(HttpStatus.BAD_REQUEST)
+        : res.sendStatus(HttpStatus.OK)
     })
   }
 }

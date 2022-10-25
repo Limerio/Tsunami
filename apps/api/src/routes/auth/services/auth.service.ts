@@ -1,10 +1,11 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Inject, Injectable } from '@nestjs/common'
 
-import { IUsersService, TUserWithoutPassword } from '@api/modules/users'
+import { IUsersService } from '@api/modules/users'
 import { Services } from '@api/utils/constants'
 
 import { IAuthService } from '../interfaces'
+import { TUser } from '@tsunami-clone/types'
 
 @Injectable()
 export class AuthService implements IAuthService {
@@ -15,7 +16,7 @@ export class AuthService implements IAuthService {
   async validateUser(
     username: string,
     password: string
-  ): Promise<TUserWithoutPassword | null> {
+  ): Promise<TUser | null> {
     const user = await this.usersService.findOne(username)
     if (user && this.usersService.comparePassword(password, user.password)) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
