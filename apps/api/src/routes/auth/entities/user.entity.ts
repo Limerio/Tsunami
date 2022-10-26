@@ -1,4 +1,5 @@
 import { Exclude } from 'class-transformer'
+import { ObjectId } from 'mongoose'
 
 export class UserEntity {
   username: string
@@ -7,6 +8,12 @@ export class UserEntity {
 
   @Exclude()
   password: string
+
+  @Exclude()
+  __v: number
+
+  @Exclude()
+  _id: ObjectId
 
   constructor(partial: Partial<UserEntity>) {
     Object.assign(this, partial)
