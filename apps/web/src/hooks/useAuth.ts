@@ -1,6 +1,8 @@
-import { AuthService } from '@web/services'
-import { useUserContext } from '@web/stores/user'
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { useEffect } from 'react'
+
+import { useUserContext } from '@web/contexts/user'
+import { AuthService } from '@web/services'
 
 export function useAuth() {
   const { user, setUser } = useUserContext()

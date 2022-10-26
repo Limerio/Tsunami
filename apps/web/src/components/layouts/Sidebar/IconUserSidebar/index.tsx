@@ -1,5 +1,7 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Avatar } from '@mantine/core'
-import { useUserContext } from '@web/stores/user'
+
+import { useUserContext } from '@web/contexts/user'
 
 export function IconUserSidebar() {
   const { user } = useUserContext()

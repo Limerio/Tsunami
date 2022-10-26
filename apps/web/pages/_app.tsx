@@ -1,14 +1,18 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
+import { MantineProvider } from '@mantine/core'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import { MantineProvider } from '@mantine/core'
-import { UserProvider } from '@web/stores/user'
+
+import { UserProvider } from '@web/contexts/user'
+
 import '@web/styles/styles.css'
+import { SocketProvider } from '@web/contexts/socket'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Tsunami</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -23,7 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       >
         <UserProvider>
-          <Component {...pageProps} />
+          <SocketProvider>
+            <Component {...pageProps} />
+          </SocketProvider>
         </UserProvider>
       </MantineProvider>
     </>

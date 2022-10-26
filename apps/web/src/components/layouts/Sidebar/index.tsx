@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import {
   IconHome2,
   IconReportSearch,
@@ -10,8 +11,8 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 import { SidebarLink, type SidebarLinkProps } from './SidebarLink'
-import { AuthService } from '@web/services'
 import { IconUserSidebar } from './IconUserSidebar'
+import { AuthService } from '@web/services'
 
 const sidebarLinks: SidebarLinkProps[] = [
   { icon: IconHome2, label: 'Home', href: '/' },

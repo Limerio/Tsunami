@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import type { PropsWithChildren } from 'react'
 import Head from 'next/head'
 

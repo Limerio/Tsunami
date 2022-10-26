@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Table, ScrollArea, Text, TextInput } from '@mantine/core'
 import { useState } from 'react'
 import { IconSearch } from '@tabler/icons'
