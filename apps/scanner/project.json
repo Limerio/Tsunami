@@ -1,27 +1,58 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "name": "scanner",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/scanner/src",
   "projectType": "application",
-  "sourceRoot": "apps/scanner",
   "targets": {
     "build": {
-      "executor": "@nx-go/nx-go:build",
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
       "options": {
+        "target": "node",
+        "compiler": "tsc",
         "outputPath": "dist/apps/scanner",
-        "main": "apps/scanner/main.go"
+        "main": "apps/scanner/src/main.ts",
+        "tsConfig": "apps/scanner/tsconfig.app.json"
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/scanner/environments/environment.ts",
+              "with": "apps/scanner/environments/environment.prod.ts"
+            }
+          ]
+        }
       }
     },
     "serve": {
-      "executor": "@nx-go/nx-go:serve",
+      "executor": "@nrwl/js:node",
       "options": {
-        "main": "apps/scanner/main.go"
+        "buildTarget": "scanner:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "scanner:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/scanner/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx-go/nx-go:test"
-    },
-    "lint": {
-      "executor": "@nx-go/nx-go:lint"
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/scanner/jest.config.ts",
+        "passWithNoTests": true
+      }
     }
   },
   "tags": []
