@@ -16,8 +16,8 @@ import {
 } from '@nestjs/common'
 
 import type { IUsersService, TUserWithPassword } from '@api/modules/users'
+import { AuthenticatedRequest } from '@api/utils/interfaces'
 import { AuthGuard, LocalAuthGuard } from '../guards'
-import { AuthenticatedRequest } from '../interfaces'
 import { Services } from '@api/utils/constants'
 import { UserEntity } from '../entities'
 import { CreateUserDto } from '../dtos'

@@ -1,7 +1,7 @@
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+import { AuthenticatedRequest } from '@api/utils/interfaces'
 import { ExecutionContext, Injectable } from '@nestjs/common'
 import { AuthGuard } from '@nestjs/passport'
-
-import { AuthenticatedRequest } from '../interfaces'
 
 @Injectable()
 export class LocalAuthGuard extends AuthGuard('local') {

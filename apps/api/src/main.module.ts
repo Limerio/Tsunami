@@ -5,6 +5,7 @@ import { Module } from '@nestjs/common'
 import { RoutesModule } from './routes'
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { EnvKeys } from '@api/utils/interfaces'
+import { EventsModule } from './events'
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { EnvKeys } from '@api/utils/interfaces'
       inject: [ConfigService],
     }),
     RoutesModule,
+    EventsModule,
   ],
 })
 export class MainModule {}
