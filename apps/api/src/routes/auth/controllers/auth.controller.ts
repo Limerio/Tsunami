@@ -17,10 +17,11 @@ import {
 
 import type { IUsersService, TUserWithPassword } from '@api/modules/users'
 import { AuthenticatedRequest } from '@api/utils/interfaces'
-import { AuthGuard, LocalAuthGuard } from '../guards'
+import { CreateUserDto } from '@api/modules/users'
 import { Services } from '@api/utils/constants'
+import { LocalAuthGuard } from '../guards'
 import { UserEntity } from '../entities'
-import { CreateUserDto } from '../dtos'
+import { AuthGuard } from '@api/guards'
 import { User } from '../decorators'
 import { Response } from 'express'
 

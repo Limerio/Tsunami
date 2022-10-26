@@ -4,3 +4,7 @@ export enum Services {
   Sessions = 'SESSIONS_SERVICE',
   Scans = 'SCANS_SERVICE',
 }
+
+export enum Params {
+  ScanId = 'scanId',
+}

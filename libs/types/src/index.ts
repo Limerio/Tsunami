@@ -4,6 +4,8 @@ export type TUser = {
   createdAt: Date
 }
 
+export type TScan = {}
+
 export type TIp = {
   address: string
   port: string

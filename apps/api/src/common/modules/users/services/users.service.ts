@@ -1,16 +1,15 @@
 import { InjectModel } from '@nestjs/mongoose'
-import type { Model } from 'mongoose'
 import { ConfigService } from '@nestjs/config'
 import { Injectable } from '@nestjs/common'
+import type { Model } from 'mongoose'
 import * as bcrypt from 'bcrypt'
 
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-import { EnvKeys } from '@api/utils/interfaces'
+import { CreateUserDto, UpdateUserDto } from '../dtos'
 import { IUsersService } from '../interfaces'
-import { UpdateUserDto } from '../dtos'
-import { User } from '../models'
 import { UserDocument } from '../utils/types'
-import { CreateUserDto } from 'apps/api/src/routes/auth/dtos'
+import { EnvKeys } from '@api/utils/types'
+import { User } from '../models'
 
 @Injectable()
 export class UsersService implements IUsersService {

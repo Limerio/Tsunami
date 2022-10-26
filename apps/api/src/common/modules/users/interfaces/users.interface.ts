@@ -1,5 +1,4 @@
-import { CreateUserDto } from 'apps/api/src/routes/auth/dtos'
-import { UpdateUserDto } from '../dtos'
+import { CreateUserDto, UpdateUserDto } from '../dtos'
 import { UserDocument } from '../utils/types'
 
 export interface IUsersService {

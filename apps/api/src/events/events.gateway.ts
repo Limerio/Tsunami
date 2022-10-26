@@ -6,7 +6,7 @@ import {
 } from '@nestjs/websockets'
 import { Inject } from '@nestjs/common'
 
-import { AuthenticatedSocket } from '@api/utils/interfaces'
+import { AuthenticatedSocket } from './utils/interfaces'
 import { ISessionsService } from '@api/modules/sessions'
 import { Services } from '@api/utils/constants'
 
