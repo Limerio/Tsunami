@@ -2,7 +2,6 @@
 
 # compiled output
 dist/*
-!dist/apps/web/server.js
 tmp
 /out-tsc
 
