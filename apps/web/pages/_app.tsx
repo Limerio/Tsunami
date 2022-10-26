@@ -6,7 +6,6 @@ import Head from 'next/head'
 import { UserProvider } from '@web/contexts/user'
 
 import '@web/styles/styles.css'
-import { SocketProvider } from '@web/contexts/socket'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -27,9 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       >
         <UserProvider>
-          <SocketProvider>
-            <Component {...pageProps} />
-          </SocketProvider>
+          <Component {...pageProps} />
         </UserProvider>
       </MantineProvider>
     </>

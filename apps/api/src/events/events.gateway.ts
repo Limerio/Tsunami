@@ -32,8 +32,8 @@ export class EventsGateway {
     this.sessions.removeUserSession(client.user.username)
   }
 
-  @SubscribeMessage('esdndsde')
-  handleSomething(@MessageBody() data: string) {
+  @SubscribeMessage('test')
+  handleSomething(@MessageBody() data) {
     console.log(data)
     return { event: 'test', data }
   }

@@ -2,6 +2,7 @@ import { TUser } from '@tsunami-clone/types'
 import {
   createContext,
   Dispatch,
+  PropsWithChildren,
   SetStateAction,
   useContext,
   useState,
@@ -18,11 +19,16 @@ const UserContext = createContext<TUserContext>({
   setUser: () => {},
 })
 
-export const UserProvider = ({ children }) => {
-  const [user, setUser] = useState()
+export const UserProvider = ({ children }: PropsWithChildren) => {
+  const [user, setUser] = useState<TUser>()
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
+    <UserContext.Provider
+      value={{
+        user: user as TUser,
+        setUser: setUser as Dispatch<SetStateAction<TUser>>,
+      }}
+    >
       {children}
     </UserContext.Provider>
   )

@@ -3,6 +3,7 @@ import type { PropsWithChildren } from 'react'
 import Head from 'next/head'
 
 import { Sidebar } from '@web/components/layouts/Sidebar'
+import { SocketProvider } from '@web/contexts/socket'
 import { SidebarMain } from '@web/utils/styles'
 
 interface DashboardLayoutProps {
@@ -14,12 +15,14 @@ export function DashboardLayout({
   title,
 }: PropsWithChildren<DashboardLayoutProps>) {
   return (
-    <SidebarMain>
-      <Head>
-        <title>Dashboard {title}</title>
-      </Head>
-      <Sidebar />
-      {children}
-    </SidebarMain>
+    <SocketProvider>
+      <SidebarMain>
+        <Head>
+          <title>Dashboard {title}</title>
+        </Head>
+        <Sidebar />
+        {children}
+      </SidebarMain>
+    </SocketProvider>
   )
 }

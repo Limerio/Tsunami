@@ -4,7 +4,6 @@ import { IoAdapter } from '@nestjs/platform-socket.io'
 import * as cookieParser from 'cookie-parser'
 import * as cookie from 'cookie'
 import { createClient } from 'redis'
-import { plainToInstance } from 'class-transformer'
 import { UserEntity } from '../routes/auth/entities'
 
 export class WsAdapter extends IoAdapter {
@@ -34,16 +33,15 @@ export class WsAdapter extends IoAdapter {
       const redisClient = createClient()
       await redisClient.connect()
 
-      const sessionDB = JSON.parse(await redisClient.get(signedCookie))
+      const sessionDB = JSON.parse(
+        await redisClient.get(`sess:${signedCookie}`)
+      )
       if (!sessionDB) return next(new Error('No session found'))
-      const userFromJson = JSON.parse(sessionDB.json)
-      if (!userFromJson.passport || !userFromJson.passport.user)
+
+      if (!sessionDB.passport || !sessionDB.passport.user)
         return next(new Error('Passport or User object does not exist.'))
 
-      const userDB = plainToInstance(
-        UserEntity,
-        JSON.parse(sessionDB.json).passport.user
-      )
+      const userDB = new UserEntity(sessionDB.passport.user)
       socket.user = userDB
       next()
     })
