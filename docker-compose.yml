@@ -19,6 +19,14 @@ services:
     networks:
       - tsunami
 
+  redis:
+    image: redis:7.0.5-alpine
+    ports:
+      - 6379:6379
+    networks:
+      - tsunami
+
+
   caddy:
     image: caddy
     ports:

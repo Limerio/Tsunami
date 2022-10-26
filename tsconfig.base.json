@@ -16,9 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@api/*": ["apps/api/src/common/*"],
-      "@web/*": ["apps/web/src/*"],
       "@tsunami-clone/constants": ["libs/constants/src/index.ts"],
-      "@tsunami-clone/types": ["libs/types/src/index.ts"]
+      "@tsunami-clone/types": ["libs/types/src/index.ts"],
+      "@tsunami-clone/ws-client": ["libs/ws-client/src/index.ts"],
+      "@web/*": ["apps/web/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
