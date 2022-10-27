@@ -1,6 +1,7 @@
+import { Injectable } from '@nestjs/common'
+
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { AuthenticatedSocket } from '@api/utils/interfaces'
-import { Injectable } from '@nestjs/common'
 import { ISessionsService } from '../interfaces'
 
 @Injectable()

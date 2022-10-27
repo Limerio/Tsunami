@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@api/*": ["apps/api/src/common/*"],
+      "@api/*": ["apps/api/src/core/*"],
       "@tsunami-clone/constants": ["libs/constants/src/index.ts"],
       "@tsunami-clone/types": ["libs/types/src/index.ts"],
       "@tsunami-clone/ws-client": ["libs/ws-client/src/index.ts"],

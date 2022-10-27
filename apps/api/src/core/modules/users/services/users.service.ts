@@ -6,9 +6,9 @@ import * as bcrypt from 'bcrypt'
 
 // eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { CreateUserDto, UpdateUserDto } from '../dtos'
+import type { EnvKeys } from '@api/utils/types'
 import { IUsersService } from '../interfaces'
 import { UserDocument } from '../utils/types'
-import { EnvKeys } from '@api/utils/types'
 import { User } from '../models'
 
 @Injectable()
