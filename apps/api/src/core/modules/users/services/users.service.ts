@@ -19,7 +19,12 @@ export class UsersService implements IUsersService {
   ) {}
 
   async findOne(username: string): Promise<UserDocument> {
-    return await this.userModel.findOne({ username })
+    const user = await this.userModel
+      .where('username')
+      .equals(username)
+      .populate('scans')
+      .limit(1)
+    return user[0]
   }
 
   async create(data: CreateUserDto): Promise<UserDocument> {

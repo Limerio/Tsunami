@@ -4,10 +4,12 @@ export type TUser = {
   createdAt: Date
 }
 
-export type TScan = {}
+export type TScan = {
+  ip: string
+  user: TUser
+  ports: TPortScan[]
+}
 
-export type TIp = {
-  address: string
+export type TPortScan = {
   port: string
-  type?: string
 }

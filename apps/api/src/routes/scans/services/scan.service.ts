@@ -14,8 +14,8 @@ export class ScanService implements IScanService {
     @InjectModel(Scan.name) private readonly scanModel: Model<ScanDocument>
   ) {}
 
-  find(): Promise<ScanEntity[]> {
-    throw new Error('Method not implemented.')
+  async find(): Promise<ScanEntity[]> {
+    return await this.scanModel.find().populate('user')
   }
   create(body: CreateScanDto): Promise<ScanEntity> {
     throw new Error('Method not implemented.')

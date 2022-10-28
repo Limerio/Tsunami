@@ -8,6 +8,7 @@ export const User: ModelDefinition = {
     {
       username: { type: String, required: true, unique: true },
       password: { type: String, required: true, unique: true },
+      scans: [{ ref: 'scan', type: Schema.Types.ObjectId }],
     },
     { timestamps: true }
   ),

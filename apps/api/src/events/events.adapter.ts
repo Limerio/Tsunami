@@ -4,7 +4,7 @@ import * as cookieParser from 'cookie-parser'
 import { createClient } from 'redis'
 import * as cookie from 'cookie'
 
-import { AuthenticatedSocket } from './utils/interfaces'
+import { AuthenticatedSocket } from '@api/utils/interfaces'
 import { UserEntity } from '../routes/auth/entities'
 
 export class WsAdapter extends IoAdapter {
