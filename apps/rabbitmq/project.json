@@ -1,7 +1,7 @@
 {
-  "name": "scanner",
+  "name": "rabbitmq",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/scanner/src",
+  "sourceRoot": "apps/rabbitmq/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,9 +10,9 @@
       "options": {
         "target": "node",
         "compiler": "tsc",
-        "outputPath": "dist/apps/scanner",
-        "main": "apps/scanner/src/main.ts",
-        "tsConfig": "apps/scanner/tsconfig.app.json"
+        "outputPath": "dist/apps/rabbitmq",
+        "main": "apps/rabbitmq/src/main.ts",
+        "tsConfig": "apps/rabbitmq/tsconfig.app.json"
       },
       "configurations": {
         "production": {
@@ -21,8 +21,8 @@
           "inspect": false,
           "fileReplacements": [
             {
-              "replace": "apps/scanner/environments/environment.ts",
-              "with": "apps/scanner/environments/environment.prod.ts"
+              "replace": "apps/rabbitmq/environments/environment.ts",
+              "with": "apps/rabbitmq/environments/environment.prod.ts"
             }
           ]
         }
@@ -31,11 +31,11 @@
     "serve": {
       "executor": "@nrwl/js:node",
       "options": {
-        "buildTarget": "scanner:build"
+        "buildTarget": "rabbitmq:build"
       },
       "configurations": {
         "production": {
-          "buildTarget": "scanner:build:production"
+          "buildTarget": "rabbitmq:build:production"
         }
       }
     },
@@ -43,14 +43,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/scanner/**/*.ts"]
+        "lintFilePatterns": ["apps/rabbitmq/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/scanner/jest.config.ts",
+        "jestConfig": "apps/rabbitmq/jest.config.ts",
         "passWithNoTests": true
       }
     }

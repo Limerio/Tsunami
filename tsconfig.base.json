@@ -17,8 +17,8 @@
     "paths": {
       "@api/*": ["apps/api/src/core/*"],
       "@tsunami-clone/constants": ["libs/constants/src/index.ts"],
+      "@tsunami-clone/scanner": ["libs/scanner/src/index.ts"],
       "@tsunami-clone/types": ["libs/types/src/index.ts"],
-      "@tsunami-clone/ws-client": ["libs/ws-client/src/index.ts"],
       "@web/*": ["apps/web/src/*"]
     }
   },

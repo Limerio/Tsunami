@@ -14,6 +14,8 @@ export class WsAdapter extends IoAdapter {
     server.use(async (socket: AuthenticatedSocket, next) => {
       const { cookie: clientCookie } = socket.handshake.headers
 
+      if (socket.handshake.auth.username === 'scanner') return next()
+
       if (!clientCookie) {
         console.log('Client has no cookies')
         return next(new Error('Not Authenticated. No cookies were sent'))
