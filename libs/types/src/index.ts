@@ -6,6 +6,7 @@ export type TUser = {
 }
 
 export type TScan = {
+  id: string
   ip: string
   user: TUser
   ports: TPortScan[]

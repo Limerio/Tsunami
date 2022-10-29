@@ -3,6 +3,7 @@ export enum Services {
   Users = 'USERS_SERVICE',
   Sessions = 'SESSIONS_SERVICE',
   Scans = 'SCANS_SERVICE',
+  RabbitMq = 'RABBITMQ_SERVICE',
 }
 
 export enum Params {

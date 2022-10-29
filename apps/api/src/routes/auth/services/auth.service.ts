@@ -5,7 +5,7 @@ import { IUsersService } from '@api/modules/users'
 import { Services } from '@api/utils/constants'
 
 import { IAuthService } from '../interfaces'
-import { TUser } from '@tsunami-clone/types'
+import { TUser } from '@api/modules/users'
 
 @Injectable()
 export class AuthService implements IAuthService {

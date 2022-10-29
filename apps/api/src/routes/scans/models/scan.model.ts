@@ -7,6 +7,10 @@ export const Scan: ModelDefinition = {
   collection: 'scans',
   schema: new Schema(
     {
+      id: {
+        type: String,
+        required: true,
+      },
       ip: {
         type: String,
         required: true,

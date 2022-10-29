@@ -4,7 +4,7 @@ import { PassportStrategy } from '@nestjs/passport'
 import { Injectable, UnauthorizedException, Inject } from '@nestjs/common'
 import { AuthService } from '../services'
 import { Services } from '@api/utils/constants'
-import { TUser } from '@tsunami-clone/types'
+import { TUser } from '@api/modules/users'
 
 @Injectable()
 export class LocalStrategy extends PassportStrategy(Strategy) {

@@ -1,11 +1,10 @@
-import { TScan } from '@tsunami-clone/types'
 import { Exclude } from 'class-transformer'
 
 export class UserEntity {
   username: string
   updateAt: Date
   createdAt: Date
-  scans: TScan[]
+  scans: unknown[]
 
   @Exclude()
   password: string

@@ -1,6 +1,7 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import {
   Body,
+  ClassSerializerInterceptor,
   Controller,
   Delete,
   Get,
@@ -10,7 +11,9 @@ import {
   Param,
   Post,
   Res,
+  SerializeOptions,
   UseGuards,
+  UseInterceptors,
 } from '@nestjs/common'
 import { Response } from 'express'
 
@@ -20,7 +23,13 @@ import { ScanEntity } from '../entities'
 import { ScanByIdPipe } from '../pipes'
 import { CreateScanDto } from '../dtos'
 import { AuthGuard } from '@api/guards'
+import { User } from '../../auth'
+import { TUserWithPassword } from '@api/modules/users'
 
+@UseInterceptors(ClassSerializerInterceptor)
+@SerializeOptions({
+  excludePrefixes: ['_'],
+})
 @Controller('scans')
 @UseGuards(AuthGuard)
 export class ScanController {
@@ -34,8 +43,11 @@ export class ScanController {
   }
 
   @Post()
-  async postScan(@Body() body: CreateScanDto): Promise<ScanEntity> {
-    return await this.scanService.create(body)
+  async postScan(
+    @Body() body: CreateScanDto,
+    @User() user: TUserWithPassword
+  ): Promise<ScanEntity> {
+    return await this.scanService.create(body, user)
   }
 
   @Delete(`:${Params.ScanId}`)
