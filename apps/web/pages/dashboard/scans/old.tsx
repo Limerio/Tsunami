@@ -10,8 +10,10 @@ import {
   type RowData,
 } from '@web/pages/dashboard/scans/old'
 import { DashboardLayout } from '@web/layouts'
+import { useAuth } from '@web/hooks'
 
 export default function DashboardOldScans() {
+  const { user } = useAuth()
   const [search, setSearch] = useState('')
   const [sortedData, setSortedData] = useState(data)
   const [sortBy, setSortBy] = useState<keyof RowData | null>(null)

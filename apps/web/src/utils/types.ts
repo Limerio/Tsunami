@@ -12,3 +12,7 @@ export type TAuthRegisterData = {
     confirmPassword: string
   }
 }
+
+export type IconProps = {
+  color: string
+}

@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import {
   Body,
   Controller,
@@ -5,6 +6,7 @@ import {
   Get,
   HttpStatus,
   Inject,
+  InternalServerErrorException,
   Param,
   Post,
   Res,
@@ -26,11 +28,6 @@ export class ScanController {
     @Inject(Services.Scans) private readonly scanService: IScanService
   ) {}
 
-  @Get()
-  async getScans() {
-    return await this.scanService.find()
-  }
-
   @Get(`:${Params.ScanId}`)
   getScan(@Param(Params.ScanId, ScanByIdPipe) scan: ScanEntity): ScanEntity {
     return scan
@@ -46,7 +43,11 @@ export class ScanController {
     @Param(Params.ScanId) scanId: string,
     @Res() res: Response
   ): Promise<void> {
-    await this.scanService.delete(scanId)
-    res.sendStatus(HttpStatus.OK)
+    try {
+      await this.scanService.delete(scanId)
+      res.sendStatus(HttpStatus.OK)
+    } catch (error) {
+      throw new InternalServerErrorException()
+    }
   }
 }

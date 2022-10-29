@@ -1,23 +1,33 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { useSocketContext } from '@web/contexts/socket'
+import { TitleDashboardMain } from '@web/utils/styles'
 import { DashboardLayout } from '@web/layouts'
 import { useAuth } from '@web/hooks'
-import { useEffect } from 'react'
+import {
+  LastReportsDashboard,
+  PluginsDashboard,
+} from '@web/pages/dashboard/Index'
+import { Container, Grid } from '@mantine/core'
 
 export default function Dashboard() {
   const { user } = useAuth()
-  const socket = useSocketContext()
-
-  useEffect(() => {
-    socket.emit('test', { data: 'data' })
-    socket.on('test', data => {
-      console.log(data)
-    })
-  }, [socket])
 
   return (
     <DashboardLayout title="Home">
-      <h1>{user?.username}</h1>
+      <Container fluid my="lg" style={{ width: '100%' }}>
+        <Grid>
+          <Grid.Col>
+            <TitleDashboardMain>
+              Welcome back, {user?.username}
+            </TitleDashboardMain>
+          </Grid.Col>
+          <Grid.Col xs={2}>
+            <LastReportsDashboard />
+          </Grid.Col>
+          <Grid.Col xs={3} offset={2}>
+            <PluginsDashboard />
+          </Grid.Col>
+        </Grid>
+      </Container>
     </DashboardLayout>
   )
 }

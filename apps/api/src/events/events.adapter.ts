@@ -1,4 +1,4 @@
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { IoAdapter } from '@nestjs/platform-socket.io'
 import * as cookieParser from 'cookie-parser'
 import { createClient } from 'redis'

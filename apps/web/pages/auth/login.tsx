@@ -1,10 +1,14 @@
-import { Form, TitleForm } from '@web/utils/styles'
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { TextInput, Button, PasswordInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { AuthService } from '@web/services'
 import Link from 'next/link'
 
+import { Form, TitleForm } from '@web/utils/styles'
+import { useUserContext } from '@web/contexts/user'
+import { AuthService } from '@web/services'
+
 export default function Login() {
+  const { setUser } = useUserContext()
   const form = useForm({
     initialValues: {
       user: {
@@ -22,9 +26,10 @@ export default function Login() {
   })
 
   const handleSubmit = async (values: typeof form.values) => {
-    const { status } = await AuthService.loginAccount(values)
+    const { data, status } = await AuthService.loginAccount(values)
     if (status === 200) {
       window.location.href = '/dashboard'
+      setUser(data)
     }
   }
 

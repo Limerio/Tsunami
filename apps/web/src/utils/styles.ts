@@ -16,3 +16,16 @@ export const TitleForm = styled.h1`
 export const SidebarMain = styled.main`
   display: flex;
 `
+
+export const TitleDashboardMain = styled.h1``
+
+export const MainContentDashboard = styled.main`
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+`
+
+export const PartDashboard = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
