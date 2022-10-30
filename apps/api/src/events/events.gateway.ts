@@ -9,6 +9,7 @@ import { Inject } from '@nestjs/common'
 import { AuthenticatedSocket } from '@api/utils/interfaces'
 import { ISessionsService } from '@api/modules/sessions'
 import { Services } from '@api/utils/constants'
+import { EventsWs } from '@tsunami-clone/constants'
 
 @WebSocketGateway({
   cors: {
@@ -32,7 +33,7 @@ export class EventsGateway {
     this.sessions.removeUserSession(client.user.username)
   }
 
-  @SubscribeMessage('test')
+  @SubscribeMessage(EventsWs.PortReady)
   handleSomething(@MessageBody() data) {
     console.log(data)
     return { event: 'test', data }

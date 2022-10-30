@@ -1,3 +1,4 @@
+import { EventsWs } from '@tsunami-clone/constants'
 import * as net from 'net'
 import { io } from 'socket.io-client'
 
@@ -17,7 +18,7 @@ export default (ip: string) => {
           port: i,
           open: true,
         }
-        socketIo.emit('scan.port.ready', data)
+        socketIo.emit(EventsWs.PortReady, data)
         console.log('Port', i, 'in use', socket.remoteFamily)
       })
       .on('error', err => {
