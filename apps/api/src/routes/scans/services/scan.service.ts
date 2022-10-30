@@ -1,6 +1,13 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { InjectModel } from '@nestjs/mongoose'
-import { Inject, Injectable } from '@nestjs/common'
+import {
+  Inject,
+  Injectable,
+  InternalServerErrorException,
+  NotFoundException,
+  NotImplementedException,
+  OnModuleInit,
+} from '@nestjs/common'
 import { ClientProxy } from '@nestjs/microservices'
 import { Model } from 'mongoose'
 import { v4 } from 'uuid'
@@ -12,14 +19,19 @@ import { IScanService } from '../interfaces'
 import { ScanEntity } from '../entities'
 import { CreateScanDto } from '../dtos'
 import { Scan } from '../models'
+import { EventsPattern } from '@tsunami-clone/constants'
 
 @Injectable()
-export class ScanService implements IScanService {
+export class ScanService implements IScanService, OnModuleInit {
   constructor(
     @InjectModel(Scan.name) private readonly scanModel: Model<ScanDocument>,
     @Inject(Services.Users) private readonly userService: IUsersService,
     @Inject(Services.RabbitMq) private readonly rabbitMqService: ClientProxy
   ) {}
+
+  async onModuleInit() {
+    await this.rabbitMqService.connect()
+  }
 
   async find(): Promise<ScanEntity[]> {
     return await this.scanModel.find().populate('user')
@@ -38,6 +50,7 @@ export class ScanService implements IScanService {
     const scanCreated = await scan.save()
     userData.scans.push(scanCreated._id)
     await userData.save()
+    this.rabbitMqService.emit(EventsPattern.ScanCreated, scanCreated.toJSON())
     return new ScanEntity(scanCreated.toJSON())
   }
 
@@ -48,10 +61,22 @@ export class ScanService implements IScanService {
       .limit(1)
       .populate('user')
 
+    if (!scan[0]) throw new NotFoundException()
+
     return new ScanEntity(scan[0].toJSON())
   }
 
-  delete(scanId: string): Promise<boolean> {
-    throw new Error('Method not implemented.')
+  async delete(scanId: string): Promise<boolean> {
+    try {
+      const scan = await this.scanModel.deleteOne({ id: scanId })
+      if (scan.deletedCount === 1) {
+        return true
+      } else {
+        throw new NotImplementedException()
+      }
+    } catch (err) {
+      console.error(err)
+      throw new InternalServerErrorException()
+    }
   }
 }

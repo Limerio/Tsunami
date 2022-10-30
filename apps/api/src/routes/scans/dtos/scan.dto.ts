@@ -1,9 +1,14 @@
-import { TPortScan } from '@tsunami-clone/types'
+import { ApiProperty } from '@nestjs/swagger'
 import { IsString } from 'class-validator'
+import { PortScanEntity } from '../entities'
 
 export class CreateScanDto {
+  @ApiProperty()
   @IsString()
   ip: string
 
-  ports: TPortScan[]
+  @ApiProperty({
+    type: [PortScanEntity],
+  })
+  ports: PortScanEntity[]
 }

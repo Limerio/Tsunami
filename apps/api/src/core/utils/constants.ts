@@ -9,3 +9,9 @@ export enum Services {
 export enum Params {
   ScanId = 'scanId',
 }
+
+export enum Controllers {
+  Scans = 'scans',
+  Auth = 'auth',
+  App = '',
+}

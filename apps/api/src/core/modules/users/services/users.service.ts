@@ -4,8 +4,8 @@ import { Injectable } from '@nestjs/common'
 import type { Model } from 'mongoose'
 import * as bcrypt from 'bcrypt'
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import { CreateUserDto, UpdateUserDto } from '../dtos'
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 import type { EnvKeys } from '@api/utils/types'
 import { IUsersService } from '../interfaces'
 import { UserDocument } from '../utils/types'
@@ -24,6 +24,7 @@ export class UsersService implements IUsersService {
       .equals(username)
       .populate('scans')
       .limit(1)
+
     return user[0]
   }
 
