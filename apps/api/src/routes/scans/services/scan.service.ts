@@ -4,7 +4,6 @@ import {
   Inject,
   Injectable,
   InternalServerErrorException,
-  NotFoundException,
   NotImplementedException,
   OnModuleInit,
 } from '@nestjs/common'
@@ -20,6 +19,7 @@ import { ScanEntity } from '../entities'
 import { CreateScanDto } from '../dtos'
 import { Scan } from '../models'
 import { EventsPattern } from '@tsunami-clone/constants'
+import { ScanNotFoundException } from '../exceptions'
 
 @Injectable()
 export class ScanService implements IScanService, OnModuleInit {
@@ -61,7 +61,7 @@ export class ScanService implements IScanService, OnModuleInit {
       .limit(1)
       .populate('user')
 
-    if (!scan[0]) throw new NotFoundException()
+    if (!scan[0]) throw new ScanNotFoundException()
 
     return new ScanEntity(scan[0].toJSON())
   }

@@ -16,16 +16,17 @@ import {
   ForbiddenException,
 } from '@nestjs/common'
 import {
-  ApiBadRequestResponse,
   ApiBody,
   ApiForbiddenResponse,
+  ApiInternalServerErrorResponse,
   ApiOkResponse,
   ApiTags,
 } from '@nestjs/swagger'
 
 import type { IUsersService, TUserWithPassword } from '@api/modules/users'
-import { AuthenticatedRequest } from '@api/utils/interfaces'
 import { Controllers, Services } from '@api/utils/constants'
+import { AuthenticatedRequest } from '@api/utils/interfaces'
+import { LogoutFailedException } from '../exceptions'
 import { CreateUserDto } from '@api/modules/users'
 import { LocalAuthGuard } from '../guards'
 import { UserEntity } from '../entities'
@@ -81,13 +82,14 @@ export class AuthController {
   @Post('register')
   async postRegister(@Body() data: CreateUserDto) {
     const user = await this.userService.create(data)
-    return new UserEntity(user)
+
+    return new UserEntity(user.toJSON())
   }
 
   @ApiOkResponse({
     description: 'The account has been successfully disconnected.',
   })
-  @ApiBadRequestResponse({
+  @ApiInternalServerErrorResponse({
     description: 'Error',
     type: 'string',
   })
@@ -97,9 +99,8 @@ export class AuthController {
     @Res() res: Response
   ): void {
     req.logout(err => {
-      return err
-        ? res.sendStatus(HttpStatus.BAD_REQUEST)
-        : res.sendStatus(HttpStatus.OK)
+      console.error(err)
+      return err ? new LogoutFailedException() : res.sendStatus(HttpStatus.OK)
     })
   }
 }

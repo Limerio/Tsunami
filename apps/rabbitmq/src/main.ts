@@ -1,5 +1,6 @@
-import { EventsPattern, portsQueue } from '@tsunami-clone/constants'
 import * as amqlib from 'amqplib'
+
+import { EventsPattern, portsQueue } from '@tsunami-clone/constants'
 import scanner from '@tsunami-clone/scanner'
 
 async function bootstrap() {

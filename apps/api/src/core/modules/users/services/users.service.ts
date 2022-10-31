@@ -10,6 +10,7 @@ import type { EnvKeys } from '@api/utils/types'
 import { IUsersService } from '../interfaces'
 import { UserDocument } from '../utils/types'
 import { User } from '../models'
+import { UserAlReadyExistException } from '../exceptions'
 
 @Injectable()
 export class UsersService implements IUsersService {
@@ -29,13 +30,17 @@ export class UsersService implements IUsersService {
   }
 
   async create(data: CreateUserDto): Promise<UserDocument> {
-    const hash = await bcrypt.hash(
-      data.password,
-      parseInt(this.configService.get('BCRYPT_SALT'))
-    )
-    const user = new this.userModel({ ...data, password: hash })
+    const user = await this.findOne(data.username)
+    if (!user) {
+      const hash = await bcrypt.hash(
+        data.password,
+        parseInt(this.configService.get('BCRYPT_SALT'))
+      )
+      const userCreated = new this.userModel({ ...data, password: hash })
 
-    return await user.save()
+      return await userCreated.save()
+    }
+    throw new UserAlReadyExistException()
   }
 
   async update(username: string, data: UpdateUserDto): Promise<UserDocument> {

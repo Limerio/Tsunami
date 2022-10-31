@@ -8,8 +8,6 @@ import {
   Get,
   HttpStatus,
   Inject,
-  InternalServerErrorException,
-  NotFoundException,
   Param,
   Post,
   Res,
@@ -17,16 +15,6 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common'
-import { Response } from 'express'
-
-import { Controllers, Params, Services } from '@api/utils/constants'
-import { IScanService } from '../interfaces'
-import { ScanEntity } from '../entities'
-import { ScanByIdPipe } from '../pipes'
-import { CreateScanDto } from '../dtos'
-import { AuthGuard } from '@api/guards'
-import { User } from '../../auth'
-import { TUserWithPassword } from '@api/modules/users'
 import {
   ApiForbiddenResponse,
   ApiInternalServerErrorResponse,
@@ -35,6 +23,17 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger'
+import { Response } from 'express'
+
+import { ScanDeletedFailException, ScanNotFoundException } from '../exceptions'
+import { Controllers, Params, Services } from '@api/utils/constants'
+import { TUserWithPassword } from '@api/modules/users'
+import { IScanService } from '../interfaces'
+import { ScanEntity } from '../entities'
+import { ScanByIdPipe } from '../pipes'
+import { CreateScanDto } from '../dtos'
+import { AuthGuard } from '@api/guards'
+import { User } from '../../auth'
 
 @UseInterceptors(ClassSerializerInterceptor)
 @SerializeOptions({
@@ -58,7 +57,7 @@ export class ScanController {
   })
   @ApiNotFoundResponse({
     description: 'Scan not found',
-    type: NotFoundException,
+    type: ScanNotFoundException,
   })
   @ApiParam({
     name: Params.ScanId,
@@ -87,11 +86,11 @@ export class ScanController {
   })
   @ApiNotFoundResponse({
     description: 'Scan not found',
-    type: NotFoundException,
+    type: ScanNotFoundException,
   })
   @ApiInternalServerErrorResponse({
     description: 'Error scan when is deleting',
-    type: InternalServerErrorException,
+    type: ScanDeletedFailException,
   })
   @ApiParam({
     name: Params.ScanId,
@@ -108,7 +107,7 @@ export class ScanController {
     if (scanDeleted) {
       res.sendStatus(HttpStatus.OK)
     } else {
-      throw new InternalServerErrorException()
+      throw new ScanDeletedFailException()
     }
   }
 }
