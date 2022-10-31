@@ -1,51 +1,41 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import {
   Body,
-  ClassSerializerInterceptor,
-  Controller,
   Delete,
-  ForbiddenException,
   Get,
   HttpStatus,
   Inject,
   Param,
   Post,
   Res,
-  SerializeOptions,
-  UseGuards,
-  UseInterceptors,
 } from '@nestjs/common'
 import {
-  ApiForbiddenResponse,
   ApiInternalServerErrorResponse,
   ApiNotFoundResponse,
   ApiOkResponse,
   ApiParam,
-  ApiTags,
 } from '@nestjs/swagger'
 import { Response } from 'express'
 
 import { ScanDeletedFailException, ScanNotFoundException } from '../exceptions'
 import { Controllers, Params, Services } from '@api/utils/constants'
 import { TUserWithPassword } from '@api/modules/users'
+import {
+  ApiForbiddenResponse,
+  AuthGuard,
+  Controller,
+  ExcludePrefixes,
+} from '@api/decorators'
 import { IScanService } from '../interfaces'
 import { ScanEntity } from '../entities'
 import { ScanByIdPipe } from '../pipes'
 import { CreateScanDto } from '../dtos'
-import { AuthGuard } from '@api/guards'
 import { User } from '../../auth'
 
-@UseInterceptors(ClassSerializerInterceptor)
-@SerializeOptions({
-  excludePrefixes: ['_'],
-})
-@ApiTags(Controllers.Scans)
+@ExcludePrefixes()
 @Controller(Controllers.Scans)
-@UseGuards(AuthGuard)
-@ApiForbiddenResponse({
-  description: 'Account not auth',
-  type: ForbiddenException,
-})
+@AuthGuard()
+@ApiForbiddenResponse()
 export class ScanController {
   constructor(
     @Inject(Services.Scans) private readonly scanService: IScanService

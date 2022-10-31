@@ -1,7 +1,6 @@
 import * as amqlib from 'amqplib'
 
 import { EventsPattern, portsQueue } from '@tsunami-clone/constants'
-import scanner from '@tsunami-clone/scanner'
 
 async function bootstrap() {
   try {
@@ -14,7 +13,7 @@ async function bootstrap() {
       channel.consume(portsQueue, msg => {
         const { pattern, data } = JSON.parse(msg.content.toString())
         if (pattern === EventsPattern.ScanCreated) {
-          scanner(data.ip)
+          console.log(data)
         }
       })
     } catch (err) {
