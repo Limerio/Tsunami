@@ -2,7 +2,7 @@ import { EventsWs } from '@tsunami-clone/constants'
 import * as net from 'net'
 import { io } from 'socket.io-client'
 
-export default (ip: string) => {
+export default async (ip: string) => {
   const socketIo = io('http://localhost:4001', {
     auth: { username: 'scanner' },
   })
@@ -22,7 +22,6 @@ export default (ip: string) => {
         console.log('Port', i, 'in use', socket.remoteFamily)
       })
       .on('error', err => {
-        console.log(err)
         if (err.message.includes('ECONNREFUSED')) {
           const data = {
             port: i,

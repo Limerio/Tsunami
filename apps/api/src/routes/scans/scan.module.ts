@@ -22,7 +22,8 @@ import { Scan } from './models'
           urls: ['amqp://localhost:5672'],
           queue: portsQueue,
           queueOptions: {
-            durable: false,
+            durable: true,
+            autoDelete: true,
           },
         },
       },

@@ -6,6 +6,7 @@ import { PortScanEntity } from './port-scan.entity'
 export class ScanEntity {
   @Exclude()
   _id: unknown
+
   @ApiProperty()
   id: string
 
@@ -19,6 +20,9 @@ export class ScanEntity {
     type: [PortScanEntity],
   })
   ports: PortScanEntity[]
+
+  @Exclude()
+  __v: number
 
   constructor(partial: Partial<ScanEntity>) {
     Object.assign(this, partial)

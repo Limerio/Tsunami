@@ -35,7 +35,6 @@ export class EventsGateway {
 
   @SubscribeMessage(EventsWs.PortReady)
   handleSomething(@MessageBody() data) {
-    console.log(data)
-    return { event: 'test', data }
+    return data
   }
 }

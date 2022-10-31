@@ -50,8 +50,9 @@ export class ScanService implements IScanService, OnModuleInit {
     const scanCreated = await scan.save()
     userData.scans.push(scanCreated._id)
     await userData.save()
-    this.rabbitMqService.emit(EventsPattern.ScanCreated, scanCreated.toJSON())
-    return new ScanEntity(scanCreated.toJSON())
+    const scanEntity = new ScanEntity(scanCreated.toJSON())
+    this.rabbitMqService.emit(EventsPattern.ScanCreated, scanEntity)
+    return scanEntity
   }
 
   async findOne(scanId: string): Promise<ScanEntity> {

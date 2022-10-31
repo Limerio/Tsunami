@@ -33,7 +33,7 @@ import { User } from '../decorators'
 import { Response } from 'express'
 
 @ExcludePrefixes()
-@Controller(Controllers.Scans)
+@Controller(Controllers.Auth)
 export class AuthController {
   constructor(
     @Inject(Services.Users) private readonly userService: IUsersService
