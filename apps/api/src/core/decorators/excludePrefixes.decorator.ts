@@ -5,10 +5,10 @@ import {
   UseInterceptors,
 } from '@nestjs/common'
 
-export const ExcludePrefixes = () =>
+export const ExcludePrefixes = (...prefixes: string[]) =>
   applyDecorators(
     UseInterceptors(ClassSerializerInterceptor),
     SerializeOptions({
-      excludePrefixes: ['_', 'password'],
+      excludePrefixes: ['_', 'password', ...prefixes],
     })
   )

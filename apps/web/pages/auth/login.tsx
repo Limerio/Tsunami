@@ -6,9 +6,11 @@ import Link from 'next/link'
 import { Form, TitleForm } from '@web/utils/styles'
 import { useUserContext } from '@web/contexts/user'
 import { AuthService } from '@web/services'
+import { useRouter } from 'next/router'
 
 export default function Login() {
   const { setUser } = useUserContext()
+  const router = useRouter()
   const form = useForm({
     initialValues: {
       user: {
@@ -28,8 +30,8 @@ export default function Login() {
   const handleSubmit = async (values: typeof form.values) => {
     const { data, status } = await AuthService.loginAccount(values)
     if (status === 200) {
-      window.location.href = '/dashboard'
       setUser(data)
+      router.push('/dashboard')
     }
   }
 

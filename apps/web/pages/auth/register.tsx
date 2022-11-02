@@ -5,8 +5,10 @@ import { Form, TitleForm } from '@web/utils/styles'
 import type { TAuthRegisterData } from '@web/utils/types'
 import { AuthService } from '@web/services'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function Register() {
+  const router = useRouter()
   const form = useForm<TAuthRegisterData>({
     initialValues: {
       user: {
@@ -29,7 +31,7 @@ export default function Register() {
   const handleSubmit = async (values: typeof form.values) => {
     const { status } = await AuthService.registerAccount(values)
     if (status === 200) {
-      window.location.href = '/auth/login'
+      router.push('/auth/login')
     }
   }
 

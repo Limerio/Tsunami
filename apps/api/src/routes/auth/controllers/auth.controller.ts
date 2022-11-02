@@ -9,6 +9,7 @@ import {
   Request,
   Res,
   HttpStatus,
+  Put,
 } from '@nestjs/common'
 import {
   ApiBody,
@@ -22,7 +23,11 @@ import {
   Controller,
   ExcludePrefixes,
 } from '@api/decorators'
-import type { IUsersService, TUserWithPassword } from '@api/modules/users'
+import type {
+  IUsersService,
+  TUserWithPassword,
+  UpdateUserDto,
+} from '@api/modules/users'
 import { Controllers, Services } from '@api/utils/constants'
 import { AuthenticatedRequest } from '@api/utils/interfaces'
 import { LogoutFailedException } from '../exceptions'
@@ -31,6 +36,10 @@ import { LocalAuthGuard } from '../guards'
 import { UserEntity } from '../entities'
 import { User } from '../decorators'
 import { Response } from 'express'
+import {
+  UserErrorDeleteException,
+  UserErrorUpdateException,
+} from '@api/modules/users/exceptions'
 
 @ExcludePrefixes()
 @Controller(Controllers.Auth)
@@ -48,6 +57,44 @@ export class AuthController {
   @Get('user')
   async getUser(@User() user: TUserWithPassword): Promise<UserEntity> {
     return new UserEntity(user)
+  }
+
+  @ApiOkResponse({
+    description: 'login data',
+    type: UserEntity,
+  })
+  @ApiForbiddenResponse()
+  @AuthGuard()
+  @Put('user')
+  async putUser(
+    @User() user: TUserWithPassword,
+    @Body() body: UpdateUserDto
+  ): Promise<UserEntity> {
+    try {
+      const userUpdated = await this.userService.update(user.username, body)
+      return new UserEntity(userUpdated.toJSON())
+    } catch (err) {
+      throw new UserErrorUpdateException()
+    }
+  }
+
+  @ApiOkResponse({
+    description: 'login data',
+    type: UserEntity,
+  })
+  @ApiForbiddenResponse()
+  @AuthGuard()
+  @Delete('user')
+  async deleteUser(
+    @User() user: TUserWithPassword,
+    @Res() res: Response
+  ): Promise<void> {
+    try {
+      await this.userService.delete(user.username)
+      res.sendStatus(HttpStatus.OK)
+    } catch (err) {
+      throw new UserErrorDeleteException()
+    }
   }
 
   @ApiOkResponse({

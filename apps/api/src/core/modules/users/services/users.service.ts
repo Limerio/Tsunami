@@ -1,6 +1,6 @@
 import { InjectModel } from '@nestjs/mongoose'
 import { ConfigService } from '@nestjs/config'
-import { Injectable, InternalServerErrorException } from '@nestjs/common'
+import { Injectable } from '@nestjs/common'
 import type { Model } from 'mongoose'
 import * as bcrypt from 'bcrypt'
 
@@ -10,7 +10,10 @@ import type { EnvKeys } from '@api/utils/types'
 import { IUsersService } from '../interfaces'
 import { UserDocument } from '../utils/types'
 import { User } from '../models'
-import { UserAlReadyExistException } from '../exceptions'
+import {
+  UserAlReadyExistException,
+  UserErrorUpdateException,
+} from '../exceptions'
 
 @Injectable()
 export class UsersService implements IUsersService {
@@ -18,6 +21,17 @@ export class UsersService implements IUsersService {
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
     private readonly configService: ConfigService<Record<EnvKeys, unknown>>
   ) {}
+
+  async delete(username: string): Promise<boolean> {
+    try {
+      const userDeleted = await this.userModel.deleteOne({ username })
+      if (userDeleted.deletedCount === 1) {
+        return true
+      }
+    } catch (err) {
+      throw new UserErrorUpdateException()
+    }
+  }
 
   async findOne(username: string): Promise<UserDocument> {
     const user = await this.userModel
@@ -51,7 +65,7 @@ export class UsersService implements IUsersService {
         await user.updateOne(data)
         return await user.save()
       } catch (err) {
-        throw new InternalServerErrorException()
+        throw new UserErrorUpdateException()
       }
     }
   }

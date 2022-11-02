@@ -32,7 +32,7 @@ import { ScanByIdPipe } from '../pipes'
 import { CreateScanDto } from '../dtos'
 import { User } from '../../auth'
 
-@ExcludePrefixes()
+@ExcludePrefixes('scans')
 @Controller(Controllers.Scans)
 @AuthGuard()
 @ApiForbiddenResponse()

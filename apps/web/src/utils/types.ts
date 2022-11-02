@@ -5,6 +5,13 @@ export type TAuthLoginData = {
   }
 }
 
+export type TAuthDataUpdate = {
+  user: {
+    username: string
+    password: string
+  }
+}
+
 export type TAuthRegisterData = {
   user: {
     username: string
