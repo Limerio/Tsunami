@@ -17,7 +17,7 @@ async function bootstrap() {
           msg.content.toString()
         )
         if (pattern === EventsPattern.ScanCreated) {
-          await scanner(data.ip, data.user.username)
+          await scanner({ ip: data.ip, id: data.id }, data.user.username)
         }
         channel.ack(msg)
       })

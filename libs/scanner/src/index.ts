@@ -2,14 +2,15 @@ import { EventsWs } from '@tsunami-clone/constants'
 import * as net from 'net'
 import { io } from 'socket.io-client'
 
-export default async (ip: string, username: string) => {
+export default async (
+  scanData: { id: string; ip: string },
+  username: string
+) => {
   const socketIo = io('http://localhost:4001', {
     auth: { username: 'scanner' },
   })
 
-  socketIo.on('connect', () => {
-    socketIo.emit(EventsWs.ScanInProgress, { ip, username })
-  })
+  socketIo.emit(EventsWs.ScanInProgress, { scan: scanData, username })
 
   socketIo.on(
     'connect_error',
@@ -19,14 +20,14 @@ export default async (ip: string, username: string) => {
   )
 
   const scan = {
-    ip,
+    ...scanData,
     ports: [],
   }
 
   for (let i = 1; i < 65536; i++) {
     const socket = new net.Socket()
     socket
-      .connect(i, ip)
+      .connect(i, scanData.ip)
       .on('ready', () => {
         scan.ports.push({
           port: i,
@@ -38,7 +39,7 @@ export default async (ip: string, username: string) => {
         if (err.message.includes('ECONNREFUSED')) {
           scan.ports.push({
             port: i,
-            open: true,
+            open: false,
           })
           return
         }

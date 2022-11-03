@@ -39,7 +39,7 @@ export class EventsGateway {
   scanInProgress(@MessageBody() data) {
     this.sessions
       .getUserSession(data.username)
-      .emit(EventsWs.ScanInProgress, { ip: data.ip })
+      .emit(EventsWs.ScanInProgress, { scan: data.scan })
   }
 
   @SubscribeMessage(EventsWs.ScanFinish)

@@ -16,19 +16,15 @@ import { AuthService } from '@web/services'
 
 const sidebarLinks: SidebarLinkProps[] = [
   { icon: IconHome2, label: 'Home', href: '/' },
-  { icon: IconReportAnalytics, label: 'Scan an ip', href: '/scans/new' },
-  { icon: IconReportSearch, label: 'Old scans', href: '/scans/old' },
-  { icon: IconSettings, label: 'Settings', href: '/settings' },
+  { icon: IconReportAnalytics, label: 'Scan an ip', href: 'scans/new' },
+  { icon: IconReportSearch, label: 'Old scans', href: 'scans/old' },
+  { icon: IconSettings, label: 'Settings', href: 'settings' },
 ]
 
 export function Sidebar() {
   const router = useRouter()
   const [active] = useState(
-    sidebarLinks.findIndex(
-      route =>
-        `/dashboard${route.href?.endsWith('/') ? '' : route.href}` ===
-        router.route
-    )
+    sidebarLinks.findIndex(route => `/dashboard/${route.href}` === router.route)
   )
 
   const logoutAction = () => {

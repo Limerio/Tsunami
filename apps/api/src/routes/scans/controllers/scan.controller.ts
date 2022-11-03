@@ -29,7 +29,6 @@ import {
 import {
   IScanService,
   ScanEntity,
-  CreateScanDto,
   ScanNotFoundException,
 } from '@api/modules/scans'
 import { Controllers, Params, Services } from '@api/utils/constants'
@@ -38,6 +37,7 @@ import { ScanByIdPipe } from '../pipes'
 import { TUserWithPassword } from '@api/modules/users'
 import { UserEntity } from '../../auth/entities'
 import { User } from '../../auth'
+import { v4 } from 'uuid'
 
 @ExcludePrefixes('scans')
 @Controller(Controllers.Scans)
@@ -77,15 +77,16 @@ export class ScanController implements OnModuleInit {
   })
   @Post()
   async postScan(
-    @Body() body: CreateScanDto,
-    @Res() res: Response,
+    @Body() body: { ip: string },
     @User() user: TUserWithPassword
-  ): Promise<void> {
+  ): Promise<{ id: string }> {
+    const id = v4()
     this.rabbitMqService.emit(EventsPattern.ScanCreated, {
+      id,
       ip: body.ip,
       user: new UserEntity(user),
     })
-    res.sendStatus(HttpStatus.CREATED)
+    return { id }
   }
 
   @ApiOkResponse({

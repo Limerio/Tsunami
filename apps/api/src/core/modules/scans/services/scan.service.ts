@@ -7,7 +7,6 @@ import {
   NotImplementedException,
 } from '@nestjs/common'
 import { Model } from 'mongoose'
-import { v4 } from 'uuid'
 
 import { ScanNotFoundException } from '../exceptions'
 import { ScanDocument } from '../utils/types'
@@ -35,7 +34,6 @@ export class ScanService implements IScanService {
   ): Promise<ScanEntity> {
     const userData = await this.userService.findOne(user.username)
     const scan = new this.scanModel({
-      id: v4(),
       user: userData._id,
       ...body,
     })
