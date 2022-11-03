@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common'
 import { AppModule } from './app'
 import { AuthModule } from './auth'
-import { ScanModule } from './scans'
+import { ScanRouteModule } from './scans'
 
 @Module({
-  imports: [AppModule, AuthModule, ScanModule],
+  imports: [AppModule, AuthModule, ScanRouteModule],
 })
 export class RoutesModule {}

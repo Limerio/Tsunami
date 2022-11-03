@@ -5,6 +5,7 @@ import {
   Get,
   HttpStatus,
   Inject,
+  OnModuleInit,
   Param,
   Post,
   Res,
@@ -15,31 +16,42 @@ import {
   ApiOkResponse,
   ApiParam,
 } from '@nestjs/swagger'
+import { ClientProxy } from '@nestjs/microservices'
 import { Response } from 'express'
 
-import { ScanDeletedFailException, ScanNotFoundException } from '../exceptions'
-import { Controllers, Params, Services } from '@api/utils/constants'
-import { TUserWithPassword } from '@api/modules/users'
+import { ScanDeletedFailException } from '../exceptions'
 import {
   ApiForbiddenResponse,
   AuthGuard,
   Controller,
   ExcludePrefixes,
 } from '@api/decorators'
-import { IScanService } from '../interfaces'
-import { ScanEntity } from '../entities'
+import {
+  IScanService,
+  ScanEntity,
+  CreateScanDto,
+  ScanNotFoundException,
+} from '@api/modules/scans'
+import { Controllers, Params, Services } from '@api/utils/constants'
+import { EventsPattern } from '@tsunami-clone/constants'
 import { ScanByIdPipe } from '../pipes'
-import { CreateScanDto } from '../dtos'
+import { TUserWithPassword } from '@api/modules/users'
+import { UserEntity } from '../../auth/entities'
 import { User } from '../../auth'
 
 @ExcludePrefixes('scans')
 @Controller(Controllers.Scans)
 @AuthGuard()
 @ApiForbiddenResponse()
-export class ScanController {
+export class ScanController implements OnModuleInit {
   constructor(
-    @Inject(Services.Scans) private readonly scanService: IScanService
+    @Inject(Services.Scans) private readonly scanService: IScanService,
+    @Inject(Services.RabbitMq) private readonly rabbitMqService: ClientProxy
   ) {}
+
+  async onModuleInit() {
+    await this.rabbitMqService.connect()
+  }
 
   @ApiOkResponse({
     description: 'Find Scan',
@@ -66,9 +78,14 @@ export class ScanController {
   @Post()
   async postScan(
     @Body() body: CreateScanDto,
+    @Res() res: Response,
     @User() user: TUserWithPassword
-  ): Promise<ScanEntity> {
-    return await this.scanService.create(body, user)
+  ): Promise<void> {
+    this.rabbitMqService.emit(EventsPattern.ScanCreated, {
+      ip: body.ip,
+      user: new UserEntity(user),
+    })
+    res.sendStatus(HttpStatus.CREATED)
   }
 
   @ApiOkResponse({

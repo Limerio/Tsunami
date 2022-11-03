@@ -5,33 +5,25 @@ import {
   Injectable,
   InternalServerErrorException,
   NotImplementedException,
-  OnModuleInit,
 } from '@nestjs/common'
-import { ClientProxy } from '@nestjs/microservices'
 import { Model } from 'mongoose'
 import { v4 } from 'uuid'
 
-import { IUsersService, TUserWithPassword } from '@api/modules/users'
-import { Services } from '@api/utils/constants'
+import { ScanNotFoundException } from '../exceptions'
 import { ScanDocument } from '../utils/types'
 import { IScanService } from '../interfaces'
 import { ScanEntity } from '../entities'
 import { CreateScanDto } from '../dtos'
 import { Scan } from '../models'
-import { EventsPattern } from '@tsunami-clone/constants'
-import { ScanNotFoundException } from '../exceptions'
+import { Services } from '@api/utils/constants'
+import { IUsersService, TUserWithPassword } from '@api/modules/users'
 
 @Injectable()
-export class ScanService implements IScanService, OnModuleInit {
+export class ScanService implements IScanService {
   constructor(
     @InjectModel(Scan.name) private readonly scanModel: Model<ScanDocument>,
-    @Inject(Services.Users) private readonly userService: IUsersService,
-    @Inject(Services.RabbitMq) private readonly rabbitMqService: ClientProxy
+    @Inject(Services.Users) private readonly userService: IUsersService
   ) {}
-
-  async onModuleInit() {
-    await this.rabbitMqService.connect()
-  }
 
   async find(): Promise<ScanEntity[]> {
     return await this.scanModel.find().populate('user')
@@ -50,9 +42,7 @@ export class ScanService implements IScanService, OnModuleInit {
     const scanCreated = await scan.save()
     userData.scans.push(scanCreated._id)
     await userData.save()
-    const scanEntity = new ScanEntity(scanCreated.toJSON())
-    this.rabbitMqService.emit(EventsPattern.ScanCreated, scanEntity)
-    return scanEntity
+    return new ScanEntity(scanCreated.toJSON())
   }
 
   async findOne(scanId: string): Promise<ScanEntity> {

@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger'
 import { Exclude } from 'class-transformer'
-import { ScanEntity } from '../../scans/entities'
+import { ScanEntity } from '../../../core/modules/scans/entities'
 
 export class UserEntity {
   @ApiProperty()

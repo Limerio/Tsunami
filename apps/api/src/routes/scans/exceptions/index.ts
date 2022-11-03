@@ -1,2 +1,2 @@
-export * from './scanNotFound.exception'
+export * from './scanDeletedFail.exception'
 export * from './scanDeletedFail.exception'

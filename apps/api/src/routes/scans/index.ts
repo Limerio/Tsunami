@@ -1,1 +1,1 @@
-export * from './scan.module'
+export * from './scan-route.module'

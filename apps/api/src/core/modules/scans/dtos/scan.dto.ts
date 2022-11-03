@@ -7,6 +7,8 @@ export class CreateScanDto {
   @IsString()
   ip: string
 
+  username: string
+
   @ApiProperty({
     type: [PortScanEntity],
   })

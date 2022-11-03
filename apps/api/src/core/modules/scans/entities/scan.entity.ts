@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger'
 import { Exclude } from 'class-transformer'
-import { UserEntity } from '../../auth/entities'
+import { UserEntity } from '../../../../routes/auth/entities'
 import { PortScanEntity } from './port-scan.entity'
 
 export class ScanEntity {

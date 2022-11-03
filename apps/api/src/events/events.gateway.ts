@@ -8,8 +8,9 @@ import { Inject } from '@nestjs/common'
 
 import { AuthenticatedSocket } from '@api/utils/interfaces'
 import { ISessionsService } from '@api/modules/sessions'
-import { Services } from '@api/utils/constants'
 import { EventsWs } from '@tsunami-clone/constants'
+import { IScanService } from '@api/modules/scans'
+import { Services } from '@api/utils/constants'
 
 @WebSocketGateway({
   cors: {
@@ -22,7 +23,8 @@ import { EventsWs } from '@tsunami-clone/constants'
 export class EventsGateway {
   constructor(
     @Inject(Services.Sessions)
-    private readonly sessions: ISessionsService
+    private readonly sessions: ISessionsService,
+    @Inject(Services.Scans) private readonly scansService: IScanService
   ) {}
 
   handleConnection(client: AuthenticatedSocket): void {
@@ -33,8 +35,17 @@ export class EventsGateway {
     this.sessions.removeUserSession(client.user.username)
   }
 
-  @SubscribeMessage(EventsWs.PortReady)
-  handleSomething(@MessageBody() data) {
-    return data
+  @SubscribeMessage(EventsWs.ScanInProgress)
+  scanInProgress(@MessageBody() data) {
+    this.sessions
+      .getUserSession(data.username)
+      .emit(EventsWs.ScanInProgress, { ip: data.ip })
+  }
+
+  @SubscribeMessage(EventsWs.ScanFinish)
+  scanFinish(@MessageBody() data) {
+    const userSession = this.sessions.getUserSession(data.username)
+    this.scansService.create(data.scan, userSession.user)
+    userSession?.emit(EventsWs.ScanFinish, { scan: data.scan })
   }
 }

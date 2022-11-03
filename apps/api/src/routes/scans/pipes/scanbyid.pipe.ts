@@ -1,7 +1,7 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Services } from '@api/utils/constants'
 import { PipeTransform, Injectable, Inject } from '@nestjs/common'
-import { IScanService } from '../interfaces'
+import { IScanService } from '@api/modules/scans'
 
 @Injectable()
 export class ScanByIdPipe implements PipeTransform {

@@ -1,19 +1,15 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { MongooseModule } from '@nestjs/mongoose'
 import { ClientsModule, Transport } from '@nestjs/microservices'
 import { Module } from '@nestjs/common'
 
 import { portsQueue } from '@tsunami-clone/constants'
-import { UsersModule } from '@api/modules/users'
 import { Services } from '@api/utils/constants'
+import { ScanModule } from '@api/modules/scans'
 import { ScanController } from './controllers'
-import { ScanService } from './services'
-import { Scan } from './models'
 
 @Module({
   imports: [
-    MongooseModule.forFeature([Scan]),
-    UsersModule,
+    ScanModule,
     ClientsModule.register([
       {
         name: Services.RabbitMq,
@@ -30,11 +26,5 @@ import { Scan } from './models'
     ]),
   ],
   controllers: [ScanController],
-  providers: [
-    {
-      provide: Services.Scans,
-      useClass: ScanService,
-    },
-  ],
 })
-export class ScanModule {}
+export class ScanRouteModule {}

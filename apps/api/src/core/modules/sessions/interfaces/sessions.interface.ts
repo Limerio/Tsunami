@@ -2,8 +2,8 @@
 import { AuthenticatedSocket } from '@api/utils/interfaces'
 
 export interface ISessionsService {
-  getUserSession(id: string): AuthenticatedSocket
-  addUserSession(id: string, socket: AuthenticatedSocket): void
-  removeUserSession(id: string): void
+  getUserSession(username: string): AuthenticatedSocket
+  addUserSession(username: string, socket: AuthenticatedSocket): void
+  removeUserSession(username: string): void
   getSessions(): Map<string, AuthenticatedSocket>
 }
