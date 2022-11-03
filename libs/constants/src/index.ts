@@ -9,5 +9,6 @@ export enum EventsPattern {
 }
 
 export enum EventsWs {
-  PortReady = 'scan.port.ready',
+  ScanInProgress = 'scan.progress',
+  ScanFinish = 'scan.finish',
 }

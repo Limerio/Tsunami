@@ -10,8 +10,10 @@ export type TScan = {
   ip: string
   user: TUser
   ports: TPortScan[]
+  createdAt: Date
 }
 
 export type TPortScan = {
   port: string
+  open: boolean
 }

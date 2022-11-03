@@ -17,7 +17,7 @@ async function bootstrap() {
           msg.content.toString()
         )
         if (pattern === EventsPattern.ScanCreated) {
-          await scanner(data.ip)
+          await scanner(data.ip, data.user.username)
         }
         channel.ack(msg)
       })
@@ -25,7 +25,8 @@ async function bootstrap() {
       throw new Error(err)
     }
   } catch (err) {
-    throw new Error(err)
+    console.error(err)
+    process.exit(0)
   }
 }
 
