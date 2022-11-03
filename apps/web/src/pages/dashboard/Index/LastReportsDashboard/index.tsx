@@ -1,10 +1,14 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { Button, Card, Group, Text } from '@mantine/core'
+import { Button, Card, Group, Skeleton, Text } from '@mantine/core'
+import { useRouter } from 'next/router'
+
 import { useUserContext } from '@web/contexts/user'
-import Link from 'next/link'
 
 export function LastReportsDashboard() {
   const { user } = useUserContext()
+  const router = useRouter()
+
+  const redirect = () => router.push('/dashboard/scans/old')
 
   return (
     <Card withBorder shadow="sm" radius="md">
@@ -14,15 +18,26 @@ export function LastReportsDashboard() {
         </Group>
       </Card.Section>
 
-      {user.scans.slice(0, 3).map(scan => (
-        <Card.Section key={scan.ip} withBorder inheritPadding py="xs">
-          {scan.ip}
-        </Card.Section>
-      ))}
+      {user ? (
+        user.scans.slice(0, 3).map((scan, i) => (
+          <Card.Section
+            key={`${scan.ip}-${i}`}
+            withBorder
+            inheritPadding
+            py="xs"
+          >
+            {scan.ip}
+          </Card.Section>
+        ))
+      ) : (
+        <Skeleton>
+          <Card.Section></Card.Section>
+        </Skeleton>
+      )}
 
       <Card.Section withBorder inheritPadding py="xs">
-        <Button color="blue" fullWidth mt="md" radius="md">
-          <Link href="/dashboard/scans/old">View all</Link>
+        <Button onClick={redirect} color="blue" fullWidth mt="md" radius="md">
+          View all
         </Button>
       </Card.Section>
     </Card>

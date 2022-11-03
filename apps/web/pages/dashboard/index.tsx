@@ -1,16 +1,16 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { TitleDashboardMain } from '@web/utils/styles'
 import { DashboardLayout } from '@web/layouts'
-import { useAuth } from '@web/hooks'
+
 import {
   LastReportsDashboard,
   PluginsDashboard,
 } from '@web/pages/dashboard/Index'
 import { Container, Grid } from '@mantine/core'
+import { useUserContext } from '@web/contexts/user'
 
 export default function Dashboard() {
-  const { user } = useAuth()
-
+  const { user } = useUserContext()
   return (
     <DashboardLayout title="Home">
       <Container fluid my="lg" style={{ width: '100%' }}>

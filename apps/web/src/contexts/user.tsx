@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { TUser } from '@tsunami-clone/types'
 import {
   createContext,
@@ -21,7 +22,6 @@ const UserContext = createContext<TUserContext>({
 
 export const UserProvider = ({ children }: PropsWithChildren) => {
   const [user, setUser] = useState<TUser>()
-
   return (
     <UserContext.Provider
       value={{

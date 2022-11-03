@@ -20,6 +20,10 @@ export type TAuthRegisterData = {
   }
 }
 
+export type TScanCreateData = {
+  ip: string
+}
+
 export type IconProps = {
   color: string
 }

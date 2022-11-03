@@ -5,6 +5,6 @@ export default function IndexScan() {
   const router = useRouter()
 
   useEffect(() => {
-    router.push(router.pathname + '/view')
+    router.push(router.asPath + '/view')
   }, [router])
 }

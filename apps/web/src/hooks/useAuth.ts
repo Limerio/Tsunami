@@ -1,16 +1,18 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useUserContext } from '@web/contexts/user'
 import { AuthService } from '@web/services'
 
 export function useAuth() {
   const { user, setUser } = useUserContext()
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     AuthService.userAccount()
       .then(({ data }) => {
         setUser(data)
+        setLoading(false)
       })
       .catch(err => {
         console.log(err)
@@ -19,5 +21,5 @@ export function useAuth() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return { user }
+  return { user, loading }
 }

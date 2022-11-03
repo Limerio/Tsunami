@@ -10,7 +10,6 @@ import {
 import { useForm } from '@mantine/form'
 import { useMediaQuery } from '@mantine/hooks'
 import { useUserContext } from '@web/contexts/user'
-import { useAuth } from '@web/hooks'
 import { DashboardLayout } from '@web/layouts'
 import { AuthService } from '@web/services'
 import { Form, TitleForm } from '@web/utils/styles'
@@ -18,12 +17,11 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 export default function DashboardSettings() {
-  const { user } = useAuth()
+  const { user, setUser } = useUserContext()
   const router = useRouter()
   const isMobile = useMediaQuery('(max-width: 600px)')
   const theme = useMantineTheme()
   const [openModal, setOpenModal] = useState(false)
-  const { setUser } = useUserContext()
 
   const form = useForm({
     initialValues: {

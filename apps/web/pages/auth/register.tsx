@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { Button, PasswordInput, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
 

@@ -424,14 +424,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-b">
         <use xlinkHref="#apache-original-a" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-b)">
+      <g clipPath="url(#apache-original-b)">
         <defs>
           <path id="apache-original-c" d="M76.7 71.1h14.2v9.2H76.7z"></path>
         </defs>
         <clipPath id="apache-original-d">
           <use xlinkHref="#apache-original-c" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-d)">
+        <g clipPath="url(#apache-original-d)">
           <image
             overflow="visible"
             width="44"
@@ -456,14 +456,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-f">
         <use xlinkHref="#apache-original-e" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-f)">
+      <g clipPath="url(#apache-original-f)">
         <defs>
           <path id="apache-original-g" d="M80.6 71.5h13.8v8.4H80.6z"></path>
         </defs>
         <clipPath id="apache-original-h">
           <use xlinkHref="#apache-original-g" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-h)">
+        <g clipPath="url(#apache-original-h)">
           <image
             overflow="visible"
             width="44"
@@ -488,14 +488,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-j">
         <use xlinkHref="#apache-original-i" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-j)">
+      <g clipPath="url(#apache-original-j)">
         <defs>
           <path id="apache-original-k" d="M85.7 72h11v7.9h-11z"></path>
         </defs>
         <clipPath id="apache-original-l">
           <use xlinkHref="#apache-original-k" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-l)">
+        <g clipPath="url(#apache-original-l)">
           <image
             overflow="visible"
             width="36"
@@ -520,14 +520,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-n">
         <use xlinkHref="#apache-original-m" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-n)">
+      <g clipPath="url(#apache-original-n)">
         <defs>
           <path id="apache-original-o" d="M89.7 72.3h9.6v7.8h-9.6z"></path>
         </defs>
         <clipPath id="apache-original-p">
           <use xlinkHref="#apache-original-o" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-p)">
+        <g clipPath="url(#apache-original-p)">
           <image
             overflow="visible"
             width="32"
@@ -552,14 +552,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-r">
         <use xlinkHref="#apache-original-q" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-r)">
+      <g clipPath="url(#apache-original-r)">
         <defs>
           <path id="apache-original-s" d="M92.9 72.5h11.5v7.6H92.9z"></path>
         </defs>
         <clipPath id="apache-original-t">
           <use xlinkHref="#apache-original-s" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-t)">
+        <g clipPath="url(#apache-original-t)">
           <image
             overflow="visible"
             width="40"
@@ -584,14 +584,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-v">
         <use xlinkHref="#apache-original-u" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-v)">
+      <g clipPath="url(#apache-original-v)">
         <defs>
           <path id="apache-original-w" d="M95.8 72.8H107V79H95.8z"></path>
         </defs>
         <clipPath id="apache-original-x">
           <use xlinkHref="#apache-original-w" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-x)">
+        <g clipPath="url(#apache-original-x)">
           <image
             overflow="visible"
             width="36"
@@ -616,14 +616,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-z">
         <use xlinkHref="#apache-original-y" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-z)">
+      <g clipPath="url(#apache-original-z)">
         <defs>
           <path id="apache-original-A" d="M99.6 73.1h11v6.1h-11z"></path>
         </defs>
         <clipPath id="apache-original-B">
           <use xlinkHref="#apache-original-A" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-B)">
+        <g clipPath="url(#apache-original-B)">
           <image
             overflow="visible"
             width="36"
@@ -648,14 +648,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-D">
         <use xlinkHref="#apache-original-C" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-D)">
+      <g clipPath="url(#apache-original-D)">
         <defs>
           <path id="apache-original-E" d="M102.9 73.4h11.6v6.3h-11.6z"></path>
         </defs>
         <clipPath id="apache-original-F">
           <use xlinkHref="#apache-original-E" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-F)">
+        <g clipPath="url(#apache-original-F)">
           <image
             overflow="visible"
             width="40"
@@ -680,14 +680,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-H">
         <use xlinkHref="#apache-original-G" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-H)">
+      <g clipPath="url(#apache-original-H)">
         <defs>
           <path id="apache-original-I" d="M106.5 73.6h10.9v5.7h-10.9z"></path>
         </defs>
         <clipPath id="apache-original-J">
           <use xlinkHref="#apache-original-I" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-J)">
+        <g clipPath="url(#apache-original-J)">
           <image
             overflow="visible"
             width="36"
@@ -712,14 +712,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-L">
         <use xlinkHref="#apache-original-K" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-L)">
+      <g clipPath="url(#apache-original-L)">
         <defs>
           <path id="apache-original-M" d="M109.5 73.8h10V79h-10z"></path>
         </defs>
         <clipPath id="apache-original-N">
           <use xlinkHref="#apache-original-M" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-N)">
+        <g clipPath="url(#apache-original-N)">
           <image
             overflow="visible"
             width="36"
@@ -744,14 +744,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-P">
         <use xlinkHref="#apache-original-O" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-P)">
+      <g clipPath="url(#apache-original-P)">
         <defs>
           <path id="apache-original-Q" d="M113.1 74.1h8.9v4.6h-8.9z"></path>
         </defs>
         <clipPath id="apache-original-R">
           <use xlinkHref="#apache-original-Q" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-R)">
+        <g clipPath="url(#apache-original-R)">
           <image
             overflow="visible"
             width="32"
@@ -776,14 +776,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-T">
         <use xlinkHref="#apache-original-S" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-T)">
+      <g clipPath="url(#apache-original-T)">
         <defs>
           <path id="apache-original-U" d="M116.5 74.4h7.8v3.5h-7.8z"></path>
         </defs>
         <clipPath id="apache-original-V">
           <use xlinkHref="#apache-original-U" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-V)">
+        <g clipPath="url(#apache-original-V)">
           <image
             overflow="visible"
             width="28"
@@ -808,14 +808,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-X">
         <use xlinkHref="#apache-original-W" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-X)">
+      <g clipPath="url(#apache-original-X)">
         <defs>
           <path id="apache-original-Y" d="M119.6 74.6h5.9v2.8h-5.9z"></path>
         </defs>
         <clipPath id="apache-original-Z">
           <use xlinkHref="#apache-original-Y" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-Z)">
+        <g clipPath="url(#apache-original-Z)">
           <image
             overflow="visible"
             width="24"
@@ -840,14 +840,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-ab">
         <use xlinkHref="#apache-original-aa" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-ab)">
+      <g clipPath="url(#apache-original-ab)">
         <defs>
           <path id="apache-original-ac" d="M121.5 74.8h4.8v2.3h-4.8z"></path>
         </defs>
         <clipPath id="apache-original-ad">
           <use xlinkHref="#apache-original-ac" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ad)">
+        <g clipPath="url(#apache-original-ad)">
           <image
             overflow="visible"
             width="20"
@@ -872,14 +872,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-af">
         <use xlinkHref="#apache-original-ae" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-af)">
+      <g clipPath="url(#apache-original-af)">
         <defs>
           <path id="apache-original-ag" d="M123.7 75.1h3.2v1.1h-3.2z"></path>
         </defs>
         <clipPath id="apache-original-ah">
           <use xlinkHref="#apache-original-ag" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ah)">
+        <g clipPath="url(#apache-original-ah)">
           <image
             overflow="visible"
             width="16"
@@ -904,14 +904,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aj">
         <use xlinkHref="#apache-original-ai" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aj)">
+      <g clipPath="url(#apache-original-aj)">
         <defs>
           <path id="apache-original-ak" d="M123.8 74.2h3.2v1.2h-3.2z"></path>
         </defs>
         <clipPath id="apache-original-al">
           <use xlinkHref="#apache-original-ak" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-al)">
+        <g clipPath="url(#apache-original-al)">
           <image
             overflow="visible"
             width="16"
@@ -936,14 +936,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-an">
         <use xlinkHref="#apache-original-am" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-an)">
+      <g clipPath="url(#apache-original-an)">
         <defs>
           <path id="apache-original-ao" d="M78.8 62.2h15v7.7h-15z"></path>
         </defs>
         <clipPath id="apache-original-ap">
           <use xlinkHref="#apache-original-ao" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ap)">
+        <g clipPath="url(#apache-original-ap)">
           <image
             overflow="visible"
             width="48"
@@ -968,14 +968,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-ar">
         <use xlinkHref="#apache-original-aq" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-ar)">
+      <g clipPath="url(#apache-original-ar)">
         <defs>
           <path id="apache-original-as" d="M84.1 63H96v7.5H84.1z"></path>
         </defs>
         <clipPath id="apache-original-at">
           <use xlinkHref="#apache-original-as" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-at)">
+        <g clipPath="url(#apache-original-at)">
           <image
             overflow="visible"
             width="40"
@@ -1000,14 +1000,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-av">
         <use xlinkHref="#apache-original-au" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-av)">
+      <g clipPath="url(#apache-original-av)">
         <defs>
           <path id="apache-original-aw" d="M87.8 63.5h10.6v7.3H87.8z"></path>
         </defs>
         <clipPath id="apache-original-ax">
           <use xlinkHref="#apache-original-aw" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ax)">
+        <g clipPath="url(#apache-original-ax)">
           <image
             overflow="visible"
             width="36"
@@ -1032,14 +1032,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-az">
         <use xlinkHref="#apache-original-ay" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-az)">
+      <g clipPath="url(#apache-original-az)">
         <defs>
           <path id="apache-original-aA" d="M91.1 64.1h12.1v7H91.1z"></path>
         </defs>
         <clipPath id="apache-original-aB">
           <use xlinkHref="#apache-original-aA" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aB)">
+        <g clipPath="url(#apache-original-aB)">
           <image
             overflow="visible"
             width="40"
@@ -1064,14 +1064,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aD">
         <use xlinkHref="#apache-original-aC" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aD)">
+      <g clipPath="url(#apache-original-aD)">
         <defs>
           <path id="apache-original-aE" d="M94.5 66.2h12v5.4h-12z"></path>
         </defs>
         <clipPath id="apache-original-aF">
           <use xlinkHref="#apache-original-aE" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aF)">
+        <g clipPath="url(#apache-original-aF)">
           <image
             overflow="visible"
             width="40"
@@ -1096,14 +1096,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aH">
         <use xlinkHref="#apache-original-aG" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aH)">
+      <g clipPath="url(#apache-original-aH)">
         <defs>
           <path id="apache-original-aI" d="M98.8 66.9h12V72h-12z"></path>
         </defs>
         <clipPath id="apache-original-aJ">
           <use xlinkHref="#apache-original-aI" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aJ)">
+        <g clipPath="url(#apache-original-aJ)">
           <image
             overflow="visible"
             width="40"
@@ -1128,14 +1128,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aL">
         <use xlinkHref="#apache-original-aK" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aL)">
+      <g clipPath="url(#apache-original-aL)">
         <defs>
           <path id="apache-original-aM" d="M102.3 67.2h12.5v5.3h-12.5z"></path>
         </defs>
         <clipPath id="apache-original-aN">
           <use xlinkHref="#apache-original-aM" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aN)">
+        <g clipPath="url(#apache-original-aN)">
           <image
             overflow="visible"
             width="40"
@@ -1160,14 +1160,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aP">
         <use xlinkHref="#apache-original-aO" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aP)">
+      <g clipPath="url(#apache-original-aP)">
         <defs>
           <path id="apache-original-aQ" d="M109.4 68.9H120v4.3h-10.6z"></path>
         </defs>
         <clipPath id="apache-original-aR">
           <use xlinkHref="#apache-original-aQ" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aR)">
+        <g clipPath="url(#apache-original-aR)">
           <image
             overflow="visible"
             width="36"
@@ -1192,14 +1192,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aT">
         <use xlinkHref="#apache-original-aS" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aT)">
+      <g clipPath="url(#apache-original-aT)">
         <defs>
           <path id="apache-original-aU" d="M106.3 68.2H118v4.7h-11.7z"></path>
         </defs>
         <clipPath id="apache-original-aV">
           <use xlinkHref="#apache-original-aU" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aV)">
+        <g clipPath="url(#apache-original-aV)">
           <image
             overflow="visible"
             width="40"
@@ -1224,14 +1224,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-aX">
         <use xlinkHref="#apache-original-aW" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-aX)">
+      <g clipPath="url(#apache-original-aX)">
         <defs>
           <path id="apache-original-aY" d="M112.7 69.7h9.5v3.9h-9.5z"></path>
         </defs>
         <clipPath id="apache-original-aZ">
           <use xlinkHref="#apache-original-aY" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-aZ)">
+        <g clipPath="url(#apache-original-aZ)">
           <image
             overflow="visible"
             width="32"
@@ -1256,14 +1256,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bb">
         <use xlinkHref="#apache-original-ba" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bb)">
+      <g clipPath="url(#apache-original-bb)">
         <defs>
           <path id="apache-original-bc" d="M119.5 72.3h6.3v2.1h-6.3z"></path>
         </defs>
         <clipPath id="apache-original-bd">
           <use xlinkHref="#apache-original-bc" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bd)">
+        <g clipPath="url(#apache-original-bd)">
           <image
             overflow="visible"
             width="24"
@@ -1288,14 +1288,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bf">
         <use xlinkHref="#apache-original-be" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bf)">
+      <g clipPath="url(#apache-original-bf)">
         <defs>
           <path id="apache-original-bg" d="M121.4 73h5.1v1.7h-5.1z"></path>
         </defs>
         <clipPath id="apache-original-bh">
           <use xlinkHref="#apache-original-bg" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bh)">
+        <g clipPath="url(#apache-original-bh)">
           <image
             overflow="visible"
             width="20"
@@ -1320,14 +1320,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bj">
         <use xlinkHref="#apache-original-bi" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bj)">
+      <g clipPath="url(#apache-original-bj)">
         <defs>
           <path id="apache-original-bk" d="M116.3 71.1h8.3v3h-8.3z"></path>
         </defs>
         <clipPath id="apache-original-bl">
           <use xlinkHref="#apache-original-bk" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bl)">
+        <g clipPath="url(#apache-original-bl)">
           <image
             overflow="visible"
             width="28"
@@ -1352,14 +1352,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bn">
         <use xlinkHref="#apache-original-bm" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bn)">
+      <g clipPath="url(#apache-original-bn)">
         <defs>
           <path id="apache-original-bo" d="M20.3 58.6h3v8.2h-3z"></path>
         </defs>
         <clipPath id="apache-original-bp">
           <use xlinkHref="#apache-original-bo" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bp)">
+        <g clipPath="url(#apache-original-bp)">
           <image
             overflow="visible"
             width="16"
@@ -1384,14 +1384,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-br">
         <use xlinkHref="#apache-original-bq" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-br)">
+      <g clipPath="url(#apache-original-br)">
         <defs>
           <path id="apache-original-bs" d="M22.3 59h3.5v9.9h-3.5z"></path>
         </defs>
         <clipPath id="apache-original-bt">
           <use xlinkHref="#apache-original-bs" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bt)">
+        <g clipPath="url(#apache-original-bt)">
           <image
             overflow="visible"
             width="16"
@@ -1416,14 +1416,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bv">
         <use xlinkHref="#apache-original-bu" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bv)">
+      <g clipPath="url(#apache-original-bv)">
         <defs>
           <path id="apache-original-bw" d="M25 59.7h4.2v10.6H25z"></path>
         </defs>
         <clipPath id="apache-original-bx">
           <use xlinkHref="#apache-original-bw" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bx)">
+        <g clipPath="url(#apache-original-bx)">
           <image
             overflow="visible"
             width="20"
@@ -1448,14 +1448,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bz">
         <use xlinkHref="#apache-original-by" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bz)">
+      <g clipPath="url(#apache-original-bz)">
         <defs>
           <path id="apache-original-bA" d="M27.5 60.5h5.4v11.2h-5.4z"></path>
         </defs>
         <clipPath id="apache-original-bB">
           <use xlinkHref="#apache-original-bA" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bB)">
+        <g clipPath="url(#apache-original-bB)">
           <image
             overflow="visible"
             width="20"
@@ -1480,14 +1480,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bD">
         <use xlinkHref="#apache-original-bC" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bD)">
+      <g clipPath="url(#apache-original-bD)">
         <defs>
           <path id="apache-original-bE" d="M30.8 61.4h4.1v11.2h-4.1z"></path>
         </defs>
         <clipPath id="apache-original-bF">
           <use xlinkHref="#apache-original-bE" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bF)">
+        <g clipPath="url(#apache-original-bF)">
           <image
             overflow="visible"
             width="20"
@@ -1512,14 +1512,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bH">
         <use xlinkHref="#apache-original-bG" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bH)">
+      <g clipPath="url(#apache-original-bH)">
         <defs>
           <path id="apache-original-bI" d="M33.1 62.1h5.4v11.6h-5.4z"></path>
         </defs>
         <clipPath id="apache-original-bJ">
           <use xlinkHref="#apache-original-bI" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bJ)">
+        <g clipPath="url(#apache-original-bJ)">
           <image
             overflow="visible"
             width="20"
@@ -1544,14 +1544,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bL">
         <use xlinkHref="#apache-original-bK" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bL)">
+      <g clipPath="url(#apache-original-bL)">
         <defs>
           <path id="apache-original-bM" d="M35 62.8h7.3v12.3H35z"></path>
         </defs>
         <clipPath id="apache-original-bN">
           <use xlinkHref="#apache-original-bM" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bN)">
+        <g clipPath="url(#apache-original-bN)">
           <image
             overflow="visible"
             width="28"
@@ -1576,14 +1576,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bP">
         <use xlinkHref="#apache-original-bO" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bP)">
+      <g clipPath="url(#apache-original-bP)">
         <defs>
           <path id="apache-original-bQ" d="M38 63.6h7.3v12H38z"></path>
         </defs>
         <clipPath id="apache-original-bR">
           <use xlinkHref="#apache-original-bQ" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bR)">
+        <g clipPath="url(#apache-original-bR)">
           <image
             overflow="visible"
             width="28"
@@ -1608,14 +1608,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bT">
         <use xlinkHref="#apache-original-bS" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bT)">
+      <g clipPath="url(#apache-original-bT)">
         <defs>
           <path id="apache-original-bU" d="M42.4 64.8h6.7v11.3h-6.7z"></path>
         </defs>
         <clipPath id="apache-original-bV">
           <use xlinkHref="#apache-original-bU" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bV)">
+        <g clipPath="url(#apache-original-bV)">
           <image
             overflow="visible"
             width="24"
@@ -1640,14 +1640,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-bX">
         <use xlinkHref="#apache-original-bW" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-bX)">
+      <g clipPath="url(#apache-original-bX)">
         <defs>
           <path id="apache-original-bY" d="M45.3 65.7h7.3v11.1h-7.3z"></path>
         </defs>
         <clipPath id="apache-original-bZ">
           <use xlinkHref="#apache-original-bY" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-bZ)">
+        <g clipPath="url(#apache-original-bZ)">
           <image
             overflow="visible"
             width="28"
@@ -1672,14 +1672,14 @@ export function ApacheIcon() {
       <clipPath id="apache-original-cb">
         <use xlinkHref="#apache-original-ca" overflow="visible"></use>
       </clipPath>
-      <g clip-path="url(#apache-original-cb)">
+      <g clipPath="url(#apache-original-cb)">
         <defs>
           <path id="apache-original-cc" d="M48 66.4h7.8v10.8H48z"></path>
         </defs>
         <clipPath id="apache-original-cd">
           <use xlinkHref="#apache-original-cc" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cd)">
+        <g clipPath="url(#apache-original-cd)">
           <image
             overflow="visible"
             width="28"
@@ -1705,14 +1705,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cf">
           <use xlinkHref="#apache-original-ce" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cf)">
+        <g clipPath="url(#apache-original-cf)">
           <defs>
             <path id="apache-original-cg" d="M50.8 67h8.6v10.9h-8.6z"></path>
           </defs>
           <clipPath id="apache-original-ch">
             <use xlinkHref="#apache-original-cg" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-ch)">
+          <g clipPath="url(#apache-original-ch)">
             <image
               overflow="visible"
               width="32"
@@ -1739,14 +1739,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cj">
           <use xlinkHref="#apache-original-ci" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cj)">
+        <g clipPath="url(#apache-original-cj)">
           <defs>
             <path id="apache-original-ck" d="M54.1 67.8H62v10.1h-7.9z"></path>
           </defs>
           <clipPath id="apache-original-cl">
             <use xlinkHref="#apache-original-ck" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cl)">
+          <g clipPath="url(#apache-original-cl)">
             <image
               overflow="visible"
               width="28"
@@ -1773,14 +1773,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cn">
           <use xlinkHref="#apache-original-cm" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cn)">
+        <g clipPath="url(#apache-original-cn)">
           <defs>
             <path id="apache-original-co" d="M56.3 68.2h9v10h-9z"></path>
           </defs>
           <clipPath id="apache-original-cp">
             <use xlinkHref="#apache-original-co" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cp)">
+          <g clipPath="url(#apache-original-cp)">
             <image
               overflow="visible"
               width="32"
@@ -1807,14 +1807,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cr">
           <use xlinkHref="#apache-original-cq" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cr)">
+        <g clipPath="url(#apache-original-cr)">
           <defs>
             <path id="apache-original-cs" d="M59.3 68.8h10.6v10H59.3z"></path>
           </defs>
           <clipPath id="apache-original-ct">
             <use xlinkHref="#apache-original-cs" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-ct)">
+          <g clipPath="url(#apache-original-ct)">
             <image
               overflow="visible"
               width="36"
@@ -1841,14 +1841,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cv">
           <use xlinkHref="#apache-original-cu" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cv)">
+        <g clipPath="url(#apache-original-cv)">
           <defs>
             <path id="apache-original-cw" d="M62.1 69.3h10.4V79H62.1z"></path>
           </defs>
           <clipPath id="apache-original-cx">
             <use xlinkHref="#apache-original-cw" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cx)">
+          <g clipPath="url(#apache-original-cx)">
             <image
               overflow="visible"
               width="36"
@@ -1875,14 +1875,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cz">
           <use xlinkHref="#apache-original-cy" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cz)">
+        <g clipPath="url(#apache-original-cz)">
           <defs>
             <path id="apache-original-cA" d="M64.5 69.7h12.6v9.7H64.5z"></path>
           </defs>
           <clipPath id="apache-original-cB">
             <use xlinkHref="#apache-original-cA" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cB)">
+          <g clipPath="url(#apache-original-cB)">
             <image
               overflow="visible"
               width="40"
@@ -1909,14 +1909,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cD">
           <use xlinkHref="#apache-original-cC" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cD)">
+        <g clipPath="url(#apache-original-cD)">
           <defs>
             <path id="apache-original-cE" d="M67.5 70.1h12.3v9.6H67.5z"></path>
           </defs>
           <clipPath id="apache-original-cF">
             <use xlinkHref="#apache-original-cE" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cF)">
+          <g clipPath="url(#apache-original-cF)">
             <image
               overflow="visible"
               width="40"
@@ -1943,14 +1943,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cH">
           <use xlinkHref="#apache-original-cG" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cH)">
+        <g clipPath="url(#apache-original-cH)">
           <defs>
             <path id="apache-original-cI" d="M70.5 70.5H84v9.9H70.5z"></path>
           </defs>
           <clipPath id="apache-original-cJ">
             <use xlinkHref="#apache-original-cI" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cJ)">
+          <g clipPath="url(#apache-original-cJ)">
             <image
               overflow="visible"
               width="44"
@@ -1977,14 +1977,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cL">
           <use xlinkHref="#apache-original-cK" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cL)">
+        <g clipPath="url(#apache-original-cL)">
           <defs>
             <path id="apache-original-cM" d="M73.8 70.8h13.5V80H73.8z"></path>
           </defs>
           <clipPath id="apache-original-cN">
             <use xlinkHref="#apache-original-cM" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cN)">
+          <g clipPath="url(#apache-original-cN)">
             <image
               overflow="visible"
               width="44"
@@ -2011,14 +2011,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cP">
           <use xlinkHref="#apache-original-cO" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cP)">
+        <g clipPath="url(#apache-original-cP)">
           <defs>
             <path id="apache-original-cQ" d="M23.2 48.3h4.1v8.4h-4.1z"></path>
           </defs>
           <clipPath id="apache-original-cR">
             <use xlinkHref="#apache-original-cQ" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cR)">
+          <g clipPath="url(#apache-original-cR)">
             <image
               overflow="visible"
               width="16"
@@ -2045,14 +2045,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cT">
           <use xlinkHref="#apache-original-cS" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cT)">
+        <g clipPath="url(#apache-original-cT)">
           <defs>
             <path id="apache-original-cU" d="M24.3 48H30v9.2h-5.7z"></path>
           </defs>
           <clipPath id="apache-original-cV">
             <use xlinkHref="#apache-original-cU" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cV)">
+          <g clipPath="url(#apache-original-cV)">
             <image
               overflow="visible"
               width="20"
@@ -2079,14 +2079,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-cX">
           <use xlinkHref="#apache-original-cW" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-cX)">
+        <g clipPath="url(#apache-original-cX)">
           <defs>
             <path id="apache-original-cY" d="M25.8 48.2h7.5v10h-7.5z"></path>
           </defs>
           <clipPath id="apache-original-cZ">
             <use xlinkHref="#apache-original-cY" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-cZ)">
+          <g clipPath="url(#apache-original-cZ)">
             <image
               overflow="visible"
               width="28"
@@ -2113,14 +2113,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-db">
           <use xlinkHref="#apache-original-da" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-db)">
+        <g clipPath="url(#apache-original-db)">
           <defs>
             <path id="apache-original-dc" d="M28.4 49H37v10h-8.6z"></path>
           </defs>
           <clipPath id="apache-original-dd">
             <use xlinkHref="#apache-original-dc" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dd)">
+          <g clipPath="url(#apache-original-dd)">
             <image
               overflow="visible"
               width="32"
@@ -2147,14 +2147,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-df">
           <use xlinkHref="#apache-original-de" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-df)">
+        <g clipPath="url(#apache-original-df)">
           <defs>
             <path id="apache-original-dg" d="M31.2 49.9h8.9V60h-8.9z"></path>
           </defs>
           <clipPath id="apache-original-dh">
             <use xlinkHref="#apache-original-dg" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dh)">
+          <g clipPath="url(#apache-original-dh)">
             <image
               overflow="visible"
               width="32"
@@ -2181,14 +2181,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dj">
           <use xlinkHref="#apache-original-di" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dj)">
+        <g clipPath="url(#apache-original-dj)">
           <defs>
             <path id="apache-original-dk" d="M33.7 50.3h10.5v10.5H33.7z"></path>
           </defs>
           <clipPath id="apache-original-dl">
             <use xlinkHref="#apache-original-dk" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dl)">
+          <g clipPath="url(#apache-original-dl)">
             <image
               overflow="visible"
               width="36"
@@ -2215,14 +2215,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dn">
           <use xlinkHref="#apache-original-dm" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dn)">
+        <g clipPath="url(#apache-original-dn)">
           <defs>
             <path id="apache-original-do" d="M36.6 51.3h10.8v10.8H36.6z"></path>
           </defs>
           <clipPath id="apache-original-dp">
             <use xlinkHref="#apache-original-do" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dp)">
+          <g clipPath="url(#apache-original-dp)">
             <image
               overflow="visible"
               width="36"
@@ -2249,14 +2249,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dr">
           <use xlinkHref="#apache-original-dq" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dr)">
+        <g clipPath="url(#apache-original-dr)">
           <defs>
             <path id="apache-original-ds" d="M40.9 52.3h10.2v10.5H40.9z"></path>
           </defs>
           <clipPath id="apache-original-dt">
             <use xlinkHref="#apache-original-ds" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dt)">
+          <g clipPath="url(#apache-original-dt)">
             <image
               overflow="visible"
               width="36"
@@ -2283,14 +2283,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dv">
           <use xlinkHref="#apache-original-du" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dv)">
+        <g clipPath="url(#apache-original-dv)">
           <defs>
             <path id="apache-original-dw" d="M43.8 53.5h10.8v10H43.8z"></path>
           </defs>
           <clipPath id="apache-original-dx">
             <use xlinkHref="#apache-original-dw" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dx)">
+          <g clipPath="url(#apache-original-dx)">
             <image
               overflow="visible"
               width="36"
@@ -2317,14 +2317,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dz">
           <use xlinkHref="#apache-original-dy" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dz)">
+        <g clipPath="url(#apache-original-dz)">
           <defs>
             <path id="apache-original-dA" d="M46.8 54.4h10.5V64H46.8z"></path>
           </defs>
           <clipPath id="apache-original-dB">
             <use xlinkHref="#apache-original-dA" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dB)">
+          <g clipPath="url(#apache-original-dB)">
             <image
               overflow="visible"
               width="36"
@@ -2351,14 +2351,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dD">
           <use xlinkHref="#apache-original-dC" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dD)">
+        <g clipPath="url(#apache-original-dD)">
           <defs>
             <path id="apache-original-dE" d="M49.5 55.2h11.1v9.6H49.5z"></path>
           </defs>
           <clipPath id="apache-original-dF">
             <use xlinkHref="#apache-original-dE" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dF)">
+          <g clipPath="url(#apache-original-dF)">
             <image
               overflow="visible"
               width="36"
@@ -2385,14 +2385,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dH">
           <use xlinkHref="#apache-original-dG" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dH)">
+        <g clipPath="url(#apache-original-dH)">
           <defs>
             <path id="apache-original-dI" d="M52.6 55.9h10.3v9.5H52.6z"></path>
           </defs>
           <clipPath id="apache-original-dJ">
             <use xlinkHref="#apache-original-dI" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dJ)">
+          <g clipPath="url(#apache-original-dJ)">
             <image
               overflow="visible"
               width="36"
@@ -2419,14 +2419,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dL">
           <use xlinkHref="#apache-original-dK" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dL)">
+        <g clipPath="url(#apache-original-dL)">
           <defs>
             <path id="apache-original-dM" d="M54.7 57H66v9H54.7z"></path>
           </defs>
           <clipPath id="apache-original-dN">
             <use xlinkHref="#apache-original-dM" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dN)">
+          <g clipPath="url(#apache-original-dN)">
             <image
               overflow="visible"
               width="36"
@@ -2453,14 +2453,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dP">
           <use xlinkHref="#apache-original-dO" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dP)">
+        <g clipPath="url(#apache-original-dP)">
           <defs>
             <path id="apache-original-dQ" d="M57.7 57.7h12.5v8.8H57.7z"></path>
           </defs>
           <clipPath id="apache-original-dR">
             <use xlinkHref="#apache-original-dQ" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dR)">
+          <g clipPath="url(#apache-original-dR)">
             <image
               overflow="visible"
               width="40"
@@ -2487,14 +2487,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dT">
           <use xlinkHref="#apache-original-dS" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dT)">
+        <g clipPath="url(#apache-original-dT)">
           <defs>
             <path id="apache-original-dU" d="M60.7 58.6h11.6V67H60.7z"></path>
           </defs>
           <clipPath id="apache-original-dV">
             <use xlinkHref="#apache-original-dU" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dV)">
+          <g clipPath="url(#apache-original-dV)">
             <image
               overflow="visible"
               width="40"
@@ -2521,14 +2521,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-dX">
           <use xlinkHref="#apache-original-dW" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-dX)">
+        <g clipPath="url(#apache-original-dX)">
           <defs>
             <path id="apache-original-dY" d="M63.3 58.8h13.6v8.7H63.3z"></path>
           </defs>
           <clipPath id="apache-original-dZ">
             <use xlinkHref="#apache-original-dY" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-dZ)">
+          <g clipPath="url(#apache-original-dZ)">
             <image
               overflow="visible"
               width="44"
@@ -2555,14 +2555,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eb">
           <use xlinkHref="#apache-original-ea" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eb)">
+        <g clipPath="url(#apache-original-eb)">
           <defs>
             <path id="apache-original-ec" d="M65.9 59.6h13.7v8.5H65.9z"></path>
           </defs>
           <clipPath id="apache-original-ed">
             <use xlinkHref="#apache-original-ec" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-ed)">
+          <g clipPath="url(#apache-original-ed)">
             <image
               overflow="visible"
               width="44"
@@ -2589,14 +2589,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-ef">
           <use xlinkHref="#apache-original-ee" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ef)">
+        <g clipPath="url(#apache-original-ef)">
           <defs>
             <path id="apache-original-eg" d="M68.5 59.5h14.9v8.8H68.5z"></path>
           </defs>
           <clipPath id="apache-original-eh">
             <use xlinkHref="#apache-original-eg" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eh)">
+          <g clipPath="url(#apache-original-eh)">
             <image
               overflow="visible"
               width="48"
@@ -2623,14 +2623,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-ej">
           <use xlinkHref="#apache-original-ei" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ej)">
+        <g clipPath="url(#apache-original-ej)">
           <defs>
             <path id="apache-original-ek" d="M71.5 60.8h14.8v8.1H71.5z"></path>
           </defs>
           <clipPath id="apache-original-el">
             <use xlinkHref="#apache-original-ek" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-el)">
+          <g clipPath="url(#apache-original-el)">
             <image
               overflow="visible"
               width="48"
@@ -2657,14 +2657,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-en">
           <use xlinkHref="#apache-original-em" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-en)">
+        <g clipPath="url(#apache-original-en)">
           <defs>
             <path id="apache-original-eo" d="M74.6 61.3h15.3v8.1H74.6z"></path>
           </defs>
           <clipPath id="apache-original-ep">
             <use xlinkHref="#apache-original-eo" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-ep)">
+          <g clipPath="url(#apache-original-ep)">
             <image
               overflow="visible"
               width="48"
@@ -2691,14 +2691,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-er">
           <use xlinkHref="#apache-original-eq" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-er)">
+        <g clipPath="url(#apache-original-er)">
           <defs>
             <path id="apache-original-es" d="M18.5 44.9h2.2v10.4h-2.2z"></path>
           </defs>
           <clipPath id="apache-original-et">
             <use xlinkHref="#apache-original-es" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-et)">
+          <g clipPath="url(#apache-original-et)">
             <image
               overflow="visible"
               width="12"
@@ -2725,14 +2725,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-ev">
           <use xlinkHref="#apache-original-eu" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ev)">
+        <g clipPath="url(#apache-original-ev)">
           <defs>
             <path id="apache-original-ew" d="M11.5 57.5h7.9v4.8h-7.9z"></path>
           </defs>
           <clipPath id="apache-original-ex">
             <use xlinkHref="#apache-original-ew" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-ex)">
+          <g clipPath="url(#apache-original-ex)">
             <image
               overflow="visible"
               width="28"
@@ -2759,14 +2759,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-ez">
           <use xlinkHref="#apache-original-ey" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-ez)">
+        <g clipPath="url(#apache-original-ez)">
           <defs>
             <path id="apache-original-eA" d="M15.8 50.8h5v4.8h-5z"></path>
           </defs>
           <clipPath id="apache-original-eB">
             <use xlinkHref="#apache-original-eA" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eB)">
+          <g clipPath="url(#apache-original-eB)">
             <image
               overflow="visible"
               width="20"
@@ -2793,14 +2793,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eD">
           <use xlinkHref="#apache-original-eC" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eD)">
+        <g clipPath="url(#apache-original-eD)">
           <defs>
             <path id="apache-original-eE" d="M20.1 47.3h1.7v8.5h-1.7z"></path>
           </defs>
           <clipPath id="apache-original-eF">
             <use xlinkHref="#apache-original-eE" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eF)">
+          <g clipPath="url(#apache-original-eF)">
             <image
               overflow="visible"
               width="12"
@@ -2827,14 +2827,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eH">
           <use xlinkHref="#apache-original-eG" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eH)">
+        <g clipPath="url(#apache-original-eH)">
           <defs>
             <path id="apache-original-eI" d="M16 46.4h4.4v8.7H16z"></path>
           </defs>
           <clipPath id="apache-original-eJ">
             <use xlinkHref="#apache-original-eI" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eJ)">
+          <g clipPath="url(#apache-original-eJ)">
             <image
               overflow="visible"
               width="20"
@@ -2861,14 +2861,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eL">
           <use xlinkHref="#apache-original-eK" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eL)">
+        <g clipPath="url(#apache-original-eL)">
           <defs>
             <path id="apache-original-eM" d="M19.4 46.9h2.7v8.7h-2.7z"></path>
           </defs>
           <clipPath id="apache-original-eN">
             <use xlinkHref="#apache-original-eM" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eN)">
+          <g clipPath="url(#apache-original-eN)">
             <image
               overflow="visible"
               width="16"
@@ -2895,14 +2895,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eP">
           <use xlinkHref="#apache-original-eO" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eP)">
+        <g clipPath="url(#apache-original-eP)">
           <defs>
             <path id="apache-original-eQ" d="M12.2 57.6h7.2v1.1h-7.2z"></path>
           </defs>
           <clipPath id="apache-original-eR">
             <use xlinkHref="#apache-original-eQ" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eR)">
+          <g clipPath="url(#apache-original-eR)">
             <image
               overflow="visible"
               width="28"
@@ -2929,14 +2929,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eT">
           <use xlinkHref="#apache-original-eS" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eT)">
+        <g clipPath="url(#apache-original-eT)">
           <defs>
             <path id="apache-original-eU" d="M10.1 57.5h9.2v5h-9.2z"></path>
           </defs>
           <clipPath id="apache-original-eV">
             <use xlinkHref="#apache-original-eU" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eV)">
+          <g clipPath="url(#apache-original-eV)">
             <image
               overflow="visible"
               width="32"
@@ -2963,14 +2963,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-eX">
           <use xlinkHref="#apache-original-eW" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-eX)">
+        <g clipPath="url(#apache-original-eX)">
           <defs>
             <path id="apache-original-eY" d="M13.2 57.8h7v7.3h-7z"></path>
           </defs>
           <clipPath id="apache-original-eZ">
             <use xlinkHref="#apache-original-eY" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-eZ)">
+          <g clipPath="url(#apache-original-eZ)">
             <image
               overflow="visible"
               width="24"
@@ -2997,14 +2997,14 @@ export function ApacheIcon() {
         <clipPath id="apache-original-fb">
           <use xlinkHref="#apache-original-fa" overflow="visible"></use>
         </clipPath>
-        <g clip-path="url(#apache-original-fb)">
+        <g clipPath="url(#apache-original-fb)">
           <defs>
             <path id="apache-original-fc" d="M16.8 58h4v7.8h-4z"></path>
           </defs>
           <clipPath id="apache-original-fd">
             <use xlinkHref="#apache-original-fc" overflow="visible"></use>
           </clipPath>
-          <g clip-path="url(#apache-original-fd)">
+          <g clipPath="url(#apache-original-fd)">
             <image
               overflow="visible"
               width="16"

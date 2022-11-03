@@ -7,7 +7,7 @@ export function IconUserSidebar() {
   const { user } = useUserContext()
   return (
     <Avatar variant="filled" radius="xl" color="blue">
-      {user?.username.at(0)}
+      {user.username.at(0)}
     </Avatar>
   )
 }
