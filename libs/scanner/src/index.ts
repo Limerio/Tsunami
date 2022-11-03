@@ -2,10 +2,9 @@ import { EventsWs } from '@tsunami-clone/constants'
 import * as net from 'net'
 import { io } from 'socket.io-client'
 
-export default async (
-  scanData: { id: string; ip: string },
-  username: string
-) => {
+type ScanData = { id: string; ip: string }
+
+export default async (scanData: ScanData, username: string) => {
   const socketIo = io('http://localhost:4001', {
     auth: { username: 'scanner' },
   })
