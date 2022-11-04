@@ -36,9 +36,6 @@
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   },
   "defaultProject": "api",
-  "implicitDependencies": {
-    "go.mod": "*"
-  },
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -50,12 +47,6 @@
         "style": "styled-components"
       },
       "library": {
-        "style": "styled-components",
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/next": {
-      "application": {
         "style": "styled-components",
         "linter": "eslint"
       }
