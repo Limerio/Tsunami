@@ -1,0 +1,18 @@
+stages:
+  - install
+  - lint
+  - build
+
+image: node:18.9.1
+
+install:
+  stage: install
+  script: yarn
+
+lint:
+  stage: lint
+  script: yarn lint
+
+build:
+  stage: build
+  script: yarn build
