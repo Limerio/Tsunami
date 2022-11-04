@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test",
+    "start": "node scripts/dev.js",
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js",
     "docker": "docker-compose up -d"
   },
   "private": true,

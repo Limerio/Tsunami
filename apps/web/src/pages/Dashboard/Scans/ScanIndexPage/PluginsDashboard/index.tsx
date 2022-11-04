@@ -26,6 +26,7 @@ export function PluginsDashboard() {
     <Card withBorder shadow="sm" radius="md" p="lg">
       <Group position="apart">
         <Text className={classes.title}>Plugins</Text>
+        <Text italic>this part is not started</Text>
       </Group>
       <SimpleGrid cols={3} mt="md">
         {cards.map(data => (
