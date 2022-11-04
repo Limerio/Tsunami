@@ -62,13 +62,22 @@ docker-compose up -d
 
 ### 💻 Démarrage en mode développement
 
+En exécutant cette commande, vous allez lancer nx qui va se charger de build grâce à babel tous les fichiers qui par la suite vont être lancer avec leur port attitrer dans un fichier `.env` (uniquement pour l'api)
+
+***information supplémentaire vérifier bien que dans libs/scanner/utils/constants la constante `API_URL` a bien le même port qu'il y a écrit dans votre fichier `.env` sinon la communication en simultaner ne fonctionnera pas***
+
 ```bash
 yarn dev
 ```
 
-En exécutant cette commande vous allez lancer nx qui va se charger de build grâce à babel tous les fichiers qui par la suite vont être lancer avec leur port attitrer dans un fichier `.env` (uniquement pour l'api)
+### ⛔ Vérification d'erreurs
 
-*information supplémentaire vérifier bien que dans libs/scanner/utils/constants la constante `API_URL` a bien le même port qu'il y a écrit dans votre fichier `.env` sinon la communication en simultaner ne fonctionnera pas*
+Eslint permet de vérifier s'il y a un problème dans le code et si c'est le cas écrire un rapport dans la console pour dire quelle ligne, quelle fichier a une erreur et il peut nous proposer des solutions à ce problème
+*vous pouvez l'exécuter pour être sûr qu'il n'y a pas d'erreurs mais elle n'est pas obligatoire* 
+
+```bash
+yarn lint
+```
 
 ### 🔨 Build du projet
 
@@ -90,7 +99,7 @@ Pour commencer nous avons l'application api qui est composé de trois systèmes 
 2. Un serveur websocket sur le même que vous avez mis dans le .env qui permet la communication entre l'app web l'api et le scanner qui permet d'envoyer les différentes informations sur le scan
 3. Et l'api REST qui est constitué d'un système d'authentification et la gestion des scanners
 
-> **Attention** : L'app api est le système central si elle n'est pas démarré des erreurs surviendront avec le reste du système et pareil pour les autres applications elles sont toutes autant importantes
+> **⛔ Attention** : L'app api est le système central si elle n'est pas démarré des erreurs surviendront avec le reste du système et pareil pour les autres applications elles sont toutes autant importantes
 
 Ensuite, l'application rabbitmq est une instance client du serveur rabbitmq qui permet quand un scan lancé ça envoie un JSON contenant les informations nécessaires au bon fonctionnement du scanner
 
