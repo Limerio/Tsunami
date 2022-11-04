@@ -7,12 +7,12 @@ import {
   IconReportAnalytics,
 } from '@tabler/icons'
 import { Navbar, Center, Stack } from '@mantine/core'
-import { useRouter } from 'next/router'
 import { useState } from 'react'
 
 import { SidebarLink, type SidebarLinkProps } from './SidebarLink'
 import { IconUserSidebar } from './IconUserSidebar'
 import { AuthService } from '@web/services'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const sidebarLinks: SidebarLinkProps[] = [
   { icon: IconHome2, label: 'Home', href: '/' },
@@ -22,14 +22,17 @@ const sidebarLinks: SidebarLinkProps[] = [
 ]
 
 export function Sidebar() {
-  const router = useRouter()
+  const navigate = useNavigate()
+  const location = useLocation()
   const [active] = useState(
-    sidebarLinks.findIndex(route => `/dashboard/${route.href}` === router.route)
+    sidebarLinks.findIndex(
+      route => `/dashboard/${route.href}` === location.pathname
+    )
   )
 
   const logoutAction = () => {
     AuthService.logoutAccount().then(() => {
-      router.push('/auth/login')
+      navigate('/auth/login')
     })
   }
 
@@ -45,7 +48,7 @@ export function Sidebar() {
               {...link}
               key={link.label}
               active={index === active}
-              onClick={() => router.push(`/dashboard/${link.href}`)}
+              onClick={() => navigate(`/dashboard/${link.href}`)}
             />
           ))}
         </Stack>

@@ -6,22 +6,30 @@ import { portsQueue } from '@tsunami-clone/constants'
 import { Services } from '@api/utils/constants'
 import { ScanModule } from '@api/modules/scans'
 import { ScanController } from './controllers'
+import { ConfigModule, ConfigService } from '@nestjs/config'
+import { EnvKeys } from '@api/utils/types'
 
 @Module({
   imports: [
     ScanModule,
-    ClientsModule.register([
+    ClientsModule.registerAsync([
       {
+        imports: [ConfigModule],
         name: Services.RabbitMq,
-        transport: Transport.RMQ,
-        options: {
-          urls: ['amqp://localhost:5672'],
-          queue: portsQueue,
-          queueOptions: {
-            durable: true,
-            autoDelete: true,
-          },
+        useFactory(configService: ConfigService<Record<EnvKeys, unknown>>) {
+          return {
+            transport: Transport.RMQ,
+            options: {
+              urls: [configService.get('RABBITMQ_URL') as string],
+              queue: portsQueue,
+              queueOptions: {
+                durable: true,
+                autoDelete: true,
+              },
+            },
+          }
         },
+        inject: [ConfigService],
       },
     ]),
   ],

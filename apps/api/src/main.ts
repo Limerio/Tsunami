@@ -23,7 +23,6 @@ async function bootstrap() {
   app.useWebSocketAdapter(new WsAdapter(app))
   app.useGlobalPipes(new ValidationPipe())
   app.use(compression())
-  app.set('trust proxy', 'loopback')
   app.enableCors({
     origin: ['http://localhost:4200'],
     credentials: true,
