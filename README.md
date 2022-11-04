@@ -89,7 +89,7 @@ yarn build
 
 ### 👥 Production
 
-J'aurai aimé pouvoir faire une partie pour le déploiment de tous les apps mais malheuresement par manque de temps je n'ai pas pu le faire mais vous pouvez tout de même démarrer tout avec l'explication plus haut de la partie **💻 Démarrage en mode développement**
+J'aurai aimé pouvoir faire une partie pour le déploiment de tous les apps avec le serveur Caddyy mais malheuresement par manque de temps je n'ai pas pu le faire, mais vous pouvez tout de même démarrer tout avec l'explication plus haut de la partie **💻 Démarrage en mode développement**
 
 ### ⌨️ Explication de son fonctionnement
 
