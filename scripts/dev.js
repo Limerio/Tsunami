@@ -1,7 +1,6 @@
 const { spawn, exec } = require('child_process')
-const fs = require('fs/promises')
-const path = require('path')
-
+const { readdir } = require('fs/promises')
+const { join } = require('path')
 ;(async () => {
   console.log('Check if docker is start')
   const docker = exec('npm run docker')
@@ -20,7 +19,7 @@ const path = require('path')
     }
   })
 
-  const apps = await fs.readdir(path.join('apps'))
+  const apps = await readdir(join('apps'))
   apps.map(app => {
     const childProcess = spawn(`nx serve ${app}`, { shell: true })
     childProcess.stdout.on('data', data => {
