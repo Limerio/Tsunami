@@ -10,4 +10,8 @@ export class ScanService {
   static async create(data: TScanCreateData): Promise<AxiosResponse<TScan>> {
     return await api.post('/scans', data, withCredentials)
   }
+
+  static async getScan(id: string): Promise<AxiosResponse<TScan>> {
+    return await api.get(`/scans/${id}`, withCredentials)
+  }
 }

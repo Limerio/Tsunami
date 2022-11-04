@@ -1,4 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger'
+import { TSystems } from '@tsunami-clone/types'
 
 export class PortScanEntity {
   @ApiProperty()
@@ -6,4 +7,7 @@ export class PortScanEntity {
 
   @ApiProperty()
   open: boolean
+
+  @ApiProperty()
+  type: TSystems
 }

@@ -1,6 +1,7 @@
 import { EventsWs } from '@tsunami-clone/constants'
 import * as net from 'net'
 import { io } from 'socket.io-client'
+import { checkSystem } from './utils/functions'
 
 type ScanData = { id: string; ip: string }
 
@@ -9,7 +10,9 @@ export default async (scanData: ScanData, username: string) => {
     auth: { username: 'scanner' },
   })
 
-  socketIo.emit(EventsWs.ScanInProgress, { scan: scanData, username })
+  socketIo.on('connect', () =>
+    socketIo.emit(EventsWs.ScanInProgress, { scan: scanData, username })
+  )
 
   socketIo.on(
     'connect_error',
@@ -28,17 +31,27 @@ export default async (scanData: ScanData, username: string) => {
     socket
       .connect(i, scanData.ip)
       .on('ready', () => {
-        scan.ports.push({
-          port: i,
-          open: true,
-        })
-        console.log('Port', i, 'in use', socket.remoteFamily)
+        if (checkSystem(i) !== null) {
+          scan.ports.push({
+            port: i,
+            open: true,
+            type: checkSystem(i),
+          })
+        } else {
+          scan.ports.push({
+            port: i,
+            open: true,
+            type: 'unknown',
+          })
+        }
+        console.log(`Port open ${i}`)
       })
       .on('error', err => {
         if (err.message.includes('ECONNREFUSED')) {
           scan.ports.push({
             port: i,
             open: false,
+            type: 'unknown',
           })
           return
         }

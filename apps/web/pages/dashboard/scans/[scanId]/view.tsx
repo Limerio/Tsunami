@@ -22,12 +22,17 @@ import { TScan } from '@tsunami-clone/types'
 export default function ScanView() {
   const { user } = useUserContext()
   const router = useRouter()
+  console.log(router.query.scanId)
   const { classes, cx } = useStyles()
   const [scrolled, setScrolled] = useState(false)
   const [search, setSearch] = useState('')
   const scanDefault =
     user && user.scans.find(scan => scan.id === router.query.scanId)
-  const [scan, setScan] = useState<TScan>(scanDefault)
+  const [scan, setScan] = useState<TScan>({
+    ...scanDefault,
+    ports: scanDefault?.ports.filter(port => port.open),
+  })
+  const [selectFilter, setSelectFilter] = useState('Close')
   const selectors = ['Open', 'Close', 'Reset']
 
   const redirect = () => router.push('/dashboard')
@@ -44,8 +49,9 @@ export default function ScanView() {
     }
   }
   const filterOpenCloseReset = (event: string) => {
+    setSelectFilter(event)
     setSearch('')
-    switch (event) {
+    switch (selectFilter) {
       case 'Close':
         setScan(scanPrev => ({
           ...scanPrev,
@@ -77,12 +83,15 @@ export default function ScanView() {
             <Paper withBorder radius="md" className={classes.card}>
               <Text size="xl" weight={500} mt="md">
                 Created at{' '}
-                {scan && Intl.DateTimeFormat().format(new Date(scan.createdAt))}
+                {user &&
+                  scan &&
+                  Intl.DateTimeFormat().format(new Date(scan.createdAt))}
               </Text>
 
               <TextInput
                 placeholder="Search by any field"
                 mb="md"
+                size="sm"
                 radius="xl"
                 icon={<IconSearch size={14} stroke={1.5} />}
                 value={search}
@@ -105,19 +114,22 @@ export default function ScanView() {
                         <Select
                           radius="xl"
                           allowDeselect
+                          value={selectFilter}
                           onChange={filterOpenCloseReset}
                           placeholder="By Default is Reset"
                           data={selectors}
                         />
                       </th>
+                      <th>System</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {scan &&
-                      scan.ports.map(({ port, open }) => (
+                    {user &&
+                      scan?.ports?.map(({ port, open, type }) => (
                         <tr key={port}>
                           <td>{port}</td>
                           <td>{open ? 'Close' : 'Open'}</td>
+                          <td>{type}</td>
                         </tr>
                       ))}
                   </tbody>

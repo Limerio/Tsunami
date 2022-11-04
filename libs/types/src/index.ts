@@ -16,4 +16,15 @@ export type TScan = {
 export type TPortScan = {
   port: string
   open: boolean
+  type: TSystems
 }
+
+export type TSystems =
+  | 'http'
+  | 'mongodb'
+  | 'redis'
+  | 'https'
+  | 'rabbitmq'
+  | 'ssh'
+  | 'docker'
+  | 'unknown'
